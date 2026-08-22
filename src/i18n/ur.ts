@@ -9,6 +9,7 @@ export const ur: Translation = {
     howToApply: "درخواست کیسے دیں",
     applicationFee: "درخواست فیس",
     entryTest: "انٹری ٹیسٹ",
+    testPrep: "ٹیسٹ کی تیاری",
     eligibility: "کون درخواست دے سکتا ہے",
     applyNow: "ابھی درخواست دیں",
     upcoming: "آئندہ",
@@ -46,6 +47,12 @@ export const ur: Translation = {
         "3,000 روپے فیس ادا کریں (آن لائن، بینک، یا جاز کیش / ایزی پیسہ)۔",
         "رول نمبر سلپ ڈاؤن لوڈ کریں اور فاسٹ NU ٹیسٹ دیں۔",
       ],
+      resources: [
+        { name: "Khan Academy", url: "https://www.khanacademy.org", note: "مفت ریاضی اور انگریزی لیکچرز" },
+        { name: "QuizWing", url: "https://quizwing.com/entry-test/fast-nu-admission-guide/", note: "مفت FAST پرانے پیپرز اور موک ٹیسٹ" },
+        { name: "PakAdmissions", url: "https://www.pakadmissions.com/blog/fast-entry-test-complete-guide-free-practice-quiz", note: "مفت چیپٹر وائز پریکٹس" },
+        { name: "Fakhar STEM Sphere", url: "https://www.youtube.com/@fakharstemsphere", note: "یوٹیوب · FAST لیکچرر" },
+      ],
     },
     lums: {
       name: "لمز یونیورسٹی",
@@ -62,6 +69,12 @@ export const ur: Translation = {
         "11,500 روپے کی فیس واؤچر کسی بھی درج بینک میں جمع کروائیں۔",
         "LCAT دیں (یا SAT / ACT سکور جمع کروائیں)۔",
       ],
+      resources: [
+        { name: "Khan Academy (SAT)", url: "https://www.khanacademy.org/sat", note: "مفت سرکاری SAT تیاری (LCAT ≈ SAT)" },
+        { name: "GoTest", url: "https://gotest.com.pk/preparation/lums-entry-test-2026-preparation-online/", note: "مفت LCAT موک ٹیسٹ" },
+        { name: "PLS Academy", url: "https://plsboost.com/lums-university/", note: "پرانے پیپرز اور MCQs" },
+        { name: "CourseHive", url: "https://coursehive.io/courses/basic-maths-general-maths-lectures-sat-fast-nts-bcat-lcat-fast-nust-comsats-2044", note: "مفت یوٹیوب میتھ کورسز" },
+      ],
     },
     nust: {
       name: "نسٹ یونیورسٹی",
@@ -77,6 +90,13 @@ export const ur: Translation = {
         "5,000 روپے فیس ادا کریں اور دستاویزات اپ لوڈ کریں۔",
         "ٹیسٹ سے 3–5 دن پہلے ایڈمٹ کارڈ ڈاؤن لوڈ کریں۔",
         "NET دیں اور 48 گھنٹے میں نتیجہ آن لائن دیکھیں۔",
+      ],
+      resources: [
+        { name: "Khan Academy", url: "https://www.khanacademy.org", note: "مفت ریاضی اور فزکس لیکچرز" },
+        { name: "Mega Lecture · Physics", url: "https://megalecture.com/courses/net-physics/", note: "مفت NET فزکس لیکچرز اور نوٹس" },
+        { name: "Mega Lecture · Math", url: "https://megalecture.com/courses/net-mathematics/", note: "مفت NET ریاضی لیکچرز" },
+        { name: "QuizWing", url: "https://quizwing.com/entry-test/nust-net/", note: "مفت NUST پرانے پیپرز اور موک ٹیسٹ" },
+        { name: "TopGrade", url: "https://www.topgrade.pk/net-entry-test", note: "ویڈیو لیکچرز اور MCQs" },
       ],
     },
   },

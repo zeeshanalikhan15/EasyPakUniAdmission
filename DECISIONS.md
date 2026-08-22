@@ -3,6 +3,12 @@
 Key decisions for this project and why. Add a dated entry when a significant
 choice is made; don't delete old ones.
 
+## Update workflow
+
+When the user asks to "update" the admission data:
+1. Web-search each university's latest admission schedule and update the dates in `src/data/<id>.json` by hand.
+2. Also search for any new/updated test-prep resources and add them to the `resources` list in `src/i18n/en.ts` and `src/i18n/ur.ts`.
+
 ## 2026-08-23 — Per-university JSON data, no automated scraping
 
 - **Data lives in `src/data/<id>.json`** (one file per university) with a shared

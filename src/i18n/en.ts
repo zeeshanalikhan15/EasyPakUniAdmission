@@ -8,6 +8,7 @@ export const en = {
     howToApply: "How to apply",
     applicationFee: "Application fee",
     entryTest: "Entry test",
+    testPrep: "Test preparation",
     eligibility: "Who can apply",
     applyNow: "Apply now",
     upcoming: "Upcoming",
@@ -46,6 +47,12 @@ export const en = {
         "Pay the Rs. 3,000 fee (online, bank, or JazzCash / Easypaisa).",
         "Download your roll number slip and appear in the FAST NU test.",
       ],
+      resources: [
+        { name: "Khan Academy", url: "https://www.khanacademy.org", note: "Free Math & English lessons" },
+        { name: "QuizWing", url: "https://quizwing.com/entry-test/fast-nu-admission-guide/", note: "Free FAST past papers & mock tests" },
+        { name: "PakAdmissions", url: "https://www.pakadmissions.com/blog/fast-entry-test-complete-guide-free-practice-quiz", note: "Free chapter-wise practice" },
+        { name: "Fakhar STEM Sphere", url: "https://www.youtube.com/@fakharstemsphere", note: "YouTube · FAST lecturer" },
+      ],
     },
     lums: {
       name: "LUMS",
@@ -62,6 +69,12 @@ export const en = {
         "Pay the PKR 11,500 fee voucher at any listed bank.",
         "Take the LCAT (or submit SAT / ACT scores).",
       ],
+      resources: [
+        { name: "Khan Academy (SAT)", url: "https://www.khanacademy.org/sat", note: "Free official SAT prep (LCAT ≈ SAT)" },
+        { name: "GoTest", url: "https://gotest.com.pk/preparation/lums-entry-test-2026-preparation-online/", note: "Free LCAT mock tests" },
+        { name: "PLS Academy", url: "https://plsboost.com/lums-university/", note: "Past papers & MCQs" },
+        { name: "CourseHive", url: "https://coursehive.io/courses/basic-maths-general-maths-lectures-sat-fast-nts-bcat-lcat-fast-nust-comsats-2044", note: "Free YouTube maths courses" },
+      ],
     },
     nust: {
       name: "NUST",
@@ -77,6 +90,13 @@ export const en = {
         "Pay the Rs. 5,000 fee and upload your documents.",
         "Download your admit card 3–5 days before the test.",
         "Appear in NET and check your result online within 48 hours.",
+      ],
+      resources: [
+        { name: "Khan Academy", url: "https://www.khanacademy.org", note: "Free Math & Physics lessons" },
+        { name: "Mega Lecture · Physics", url: "https://megalecture.com/courses/net-physics/", note: "Free NET Physics lectures & notes" },
+        { name: "Mega Lecture · Math", url: "https://megalecture.com/courses/net-mathematics/", note: "Free NET Math lectures" },
+        { name: "QuizWing", url: "https://quizwing.com/entry-test/nust-net/", note: "Free NUST past papers & mocks" },
+        { name: "TopGrade", url: "https://www.topgrade.pk/net-entry-test", note: "Video lectures & MCQs" },
       ],
     },
   },

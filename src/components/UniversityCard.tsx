@@ -16,6 +16,7 @@ interface UniContent {
   feeNote: string
   eligibility: string
   steps: string[]
+  resources: { name: string; url: string; note: string }[]
 }
 
 interface UpcomingCycle {
@@ -145,6 +146,38 @@ export default function UniversityCard({ uni }: { uni: University }) {
             {t("common.eligibility")}
           </h3>
           <p className="mt-1 text-sm text-stone-700">{u.eligibility}</p>
+        </section>
+
+        {/* Test preparation */}
+        <section className="mt-5">
+          <h3 className="text-sm font-bold uppercase tracking-wide text-stone-500">
+            {t("common.testPrep")}
+          </h3>
+          <ul className="mt-2 space-y-2">
+            {u.resources.map((r) => {
+              const isYouTube = /youtube\.com|youtu\.be/.test(r.url)
+              return (
+                <li key={r.url}>
+                  <a
+                    href={r.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-start gap-2"
+                  >
+                    <span className="mt-0.5 shrink-0" aria-hidden="true">
+                      {isYouTube ? "▶️" : "🌐"}
+                    </span>
+                    <span className="min-w-0">
+                      <span className="block text-sm font-semibold text-stone-800 underline-offset-2 hover:underline">
+                        {r.name}
+                      </span>
+                      <span className="block text-xs text-stone-500">{r.note}</span>
+                    </span>
+                  </a>
+                </li>
+              )
+            })}
+          </ul>
         </section>
 
         {/* Apply */}

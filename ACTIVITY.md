@@ -15,6 +15,9 @@ Running log of what's been done (newest last).
   are updated manually via web research instead.
 - Moved the "dates change yearly" notice to the top and added a jump-nav to
   each university so you don't have to scroll the whole page.
+- Added a "Test preparation" section per university (YouTube channels, free
+  websites, Khan Academy).
+- Recorded the update workflow: on each "update", also refresh the resources list.
 
 ## 2026-08-22
 
