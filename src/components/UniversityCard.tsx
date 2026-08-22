@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next"
-import type { AdmissionCycle, AdmissionEvent, University } from "../data/universities"
+import type { AdmissionCycle, AdmissionEvent, University } from "../data/types"
 import {
   countdownTarget,
   daysUntil,
@@ -83,17 +83,20 @@ export default function UniversityCard({ uni }: { uni: University }) {
           </div>
         </div>
 
-        {/* Next deadline */}
+        {/* Next upcoming (single) */}
         {upcoming && (
           <div
             className="mt-4 rounded-xl p-4"
             style={{ backgroundColor: `${uni.color}14` }}
           >
             <div className="text-xs font-semibold uppercase tracking-wide opacity-70">
-              {t("common.nextDeadline")}
+              {t("common.nextUpcoming")}
             </div>
             <div className="mt-1 flex flex-wrap items-baseline gap-x-2">
-              <span className="font-bold text-stone-900">{t(`events.${upcoming.next.key}`)}</span>
+              <span className="font-bold text-stone-900">
+                {t(`events.${upcoming.next.type}`)}
+                {upcoming.next.series && <span> · {upcoming.next.series}</span>}
+              </span>
               <span className="text-sm opacity-80">
                 {formatDate(countdownTarget(upcoming.next), lang)}
               </span>

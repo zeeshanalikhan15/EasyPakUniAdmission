@@ -1,0 +1,37 @@
+name: Refresh admission data
+
+on:
+  schedule:
+    # Monthly on the 1st at 03:37 UTC (off-peak minute to avoid the :00 thundering herd)
+    - cron: '37 3 1 * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 'lts/*'
+
+      - name: Scrape admission data
+        run: node scripts/scrape.mjs
+
+      - name: Open pull request with changes
+        uses: peter-evans/create-pull-request@v7
+        with:
+          commit-message: 'chore: refresh admission data'
+          title: 'Monthly admission data refresh'
+          body: |
+            Automated scrape of admission dates. Review before merging —
+            merging into main redeploys the site.
+          branch: data-refresh
+          delete-branch: true

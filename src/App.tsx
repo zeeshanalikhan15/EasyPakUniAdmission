@@ -1,34 +1,13 @@
 import { useTranslation } from "react-i18next"
-import { universities } from "./data/universities"
-import type { AdmissionEvent, University } from "./data/universities"
-import {
-  countdownTarget,
-  daysUntil,
-  formatDate,
-  nextEventInUniversity,
-} from "./lib/dates"
+import { universities } from "./data"
+import { countdownTarget, formatDate, nextEvents } from "./lib/dates"
 import LanguageToggle from "./components/LanguageToggle"
 import UniversityCard from "./components/UniversityCard"
-
-interface Deadline {
-  uni: University
-  next: AdmissionEvent
-}
 
 function App() {
   const { t, i18n } = useTranslation()
   const lang = i18n.language
-
-  const deadlines: Deadline[] = universities.flatMap((uni) => {
-    const next = nextEventInUniversity(uni)
-    return next ? [{ uni, next }] : []
-  })
-
-  const globalNext = deadlines.reduce<Deadline | null>(
-    (best, x) =>
-      !best || countdownTarget(x.next) < countdownTarget(best.next) ? x : best,
-    null,
-  )
+  const upcoming = nextEvents(universities, 3)
 
   return (
     <div className="min-h-screen">
@@ -49,24 +28,37 @@ function App() {
       <main className="mx-auto max-w-2xl px-4 pb-16 pt-6">
         <p className="text-sm text-stone-600">{t("common.tagline")}</p>
 
-        {globalNext && (
+        {upcoming.length > 0 && (
           <div className="mt-4 rounded-2xl bg-emerald-800 p-4 text-white shadow-sm">
             <div className="text-xs font-semibold uppercase tracking-wide text-emerald-200">
-              {t("common.nextDeadline")}
+              {t("common.nextUpcoming")}
             </div>
-            <div className="mt-1 flex flex-wrap items-baseline gap-x-2 gap-y-0.5">
-              <span className="text-lg font-bold">{t(`events.${globalNext.next.key}`)}</span>
-              <span className="text-emerald-100">· {globalNext.uni.shortName}</span>
-            </div>
-            <div className="mt-2 flex flex-wrap items-baseline gap-x-2 gap-y-0.5">
-              <span className="text-3xl font-extrabold leading-none">
-                {daysUntil(countdownTarget(globalNext.next))}
-              </span>
-              <span className="text-emerald-100">{t("common.daysLeft")}</span>
-              <span className="text-emerald-100">
-                — {formatDate(countdownTarget(globalNext.next), lang)}
-              </span>
-            </div>
+            <ol className="mt-2 space-y-3">
+              {upcoming.map(({ uni, event, days }) => (
+                <li
+                  key={`${uni.id}-${event.type}-${event.date}`}
+                  className="flex items-center gap-3"
+                >
+                  <span className="text-xl leading-none" aria-hidden="true">
+                    {uni.emoji}
+                  </span>
+                  <div className="min-w-0 flex-1">
+                    <div className="text-sm font-bold leading-snug">
+                      {t(`events.${event.type}`)}
+                      {event.series && <span className="text-emerald-200"> · {event.series}</span>}
+                      <span className="text-emerald-200"> · {uni.shortName}</span>
+                    </div>
+                    <div className="text-xs text-emerald-100">
+                      {formatDate(countdownTarget(event), lang)}
+                    </div>
+                  </div>
+                  <div className="shrink-0 text-end">
+                    <div className="text-xl font-extrabold leading-none">{days}</div>
+                    <div className="text-[11px] text-emerald-100">{t("common.daysLeft")}</div>
+                  </div>
+                </li>
+              ))}
+            </ol>
           </div>
         )}
 

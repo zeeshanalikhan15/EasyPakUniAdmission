@@ -1,0 +1,32 @@
+{
+  "id": "fast",
+  "shortName": "FAST",
+  "emoji": "💻",
+  "color": "#1d4ed8",
+  "applyUrl": "https://admissions.nu.edu.pk",
+  "fee": 3000,
+  "cycles": [
+    {
+      "id": "fall-2027",
+      "title": "Fall 2027",
+      "events": [
+        { "type": "applicationOpen", "date": "2027-05-18", "tentative": true },
+        { "type": "applicationClose", "date": "2027-06-25", "tentative": true },
+        { "type": "test", "date": "2027-06-29", "endDate": "2027-07-10", "tentative": true },
+        { "type": "merit", "date": "2027-07-22", "tentative": true },
+        { "type": "classes", "date": "2027-08-16", "tentative": true }
+      ]
+    },
+    {
+      "id": "fall-2026",
+      "title": "Fall 2026",
+      "events": [
+        { "type": "applicationOpen", "date": "2026-05-20" },
+        { "type": "applicationClose", "date": "2026-06-26" },
+        { "type": "test", "date": "2026-06-29", "endDate": "2026-07-10" },
+        { "type": "merit", "date": "2026-07-22" },
+        { "type": "classes", "date": "2026-08-17" }
+      ]
+    }
+  ]
+}

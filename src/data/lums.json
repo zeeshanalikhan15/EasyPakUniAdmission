@@ -1,0 +1,36 @@
+{
+  "id": "lums",
+  "shortName": "LUMS",
+  "emoji": "🎓",
+  "color": "#9f1239",
+  "applyUrl": "https://admissions.lums.edu.pk",
+  "fee": 11500,
+  "cycles": [
+    {
+      "id": "fall-2027",
+      "title": "Fall 2027",
+      "events": [
+        { "type": "applicationOpen", "date": "2026-11-02", "tentative": true },
+        { "type": "applicationClose", "date": "2027-01-26", "tentative": true },
+        { "type": "docsDeadline", "date": "2027-01-27", "tentative": true },
+        { "type": "test", "date": "2027-02-14", "tentative": true },
+        { "type": "decisions", "date": "2027-04-15", "endDate": "2027-07-31", "tentative": true },
+        { "type": "classes", "date": "2027-09-01", "tentative": true }
+      ]
+    },
+    {
+      "id": "fall-2026",
+      "title": "Fall 2026",
+      "events": [
+        { "type": "applicationClose", "date": "2026-01-27" },
+        { "type": "docsDeadline", "date": "2026-01-28" },
+        { "type": "test", "date": "2026-02-15" },
+        { "type": "financialAid", "date": "2026-02-28" },
+        { "type": "satDeadline", "date": "2026-03-14" },
+        { "type": "actDeadline", "date": "2026-04-11" },
+        { "type": "decisions", "date": "2026-04-15", "endDate": "2026-07-31" },
+        { "type": "classes", "date": "2026-09-01" }
+      ]
+    }
+  ]
+}

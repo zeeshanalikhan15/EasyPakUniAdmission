@@ -1,4 +1,4 @@
-import type { AdmissionEvent, University } from "../data/universities"
+import type { AdmissionEvent, University } from "../data/types"
 
 const toDate = (iso: string) => new Date(`${iso}T00:00:00`)
 
@@ -13,7 +13,7 @@ export function isPast(iso: string): boolean {
   return daysUntil(iso) < 0
 }
 
-/** Localised, human-friendly date, e.g. "5 October 2026" / "5 اکتوبر 2026". */
+/** Localised, human-friendly date, e.g. "5 October 2026" / "5 اکتوبر، 2026". */
 export function formatDate(iso: string, lang: string): string {
   const locale = lang === "ur" ? "ur-PK" : "en-GB"
   return toDate(iso).toLocaleDateString(locale, {
@@ -54,4 +54,22 @@ export function nextEventInUniversity(uni: University): AdmissionEvent | null {
     if (n && (best === null || countdownTarget(n) < countdownTarget(best))) best = n
   }
   return best
+}
+
+export interface UpcomingEvent {
+  uni: University
+  event: AdmissionEvent
+  days: number
+}
+
+/** The `count` soonest upcoming events across all universities. */
+export function nextEvents(unis: University[], count: number): UpcomingEvent[] {
+  const all: UpcomingEvent[] = unis.flatMap((uni) =>
+    uni.cycles.flatMap((cycle) =>
+      cycle.events
+        .filter(eventIsUpcoming)
+        .map((event) => ({ uni, event, days: daysUntil(countdownTarget(event)) })),
+    ),
+  )
+  return all.sort((a, b) => a.days - b.days).slice(0, count)
 }
