@@ -51,7 +51,7 @@ export const en = {
         { name: "Khan Academy", url: "https://www.khanacademy.org", note: "Free Math & English lessons" },
         { name: "QuizWing", url: "https://quizwing.com/entry-test/fast-nu-admission-guide/", note: "Free FAST past papers & mock tests" },
         { name: "PakAdmissions", url: "https://www.pakadmissions.com/blog/fast-entry-test-complete-guide-free-practice-quiz", note: "Free chapter-wise practice" },
-        { name: "Fakhar STEM Sphere", url: "https://www.youtube.com/@fakharstemsphere", note: "YouTube · FAST lecturer" },
+        { name: "Fakhar STEM Sphere", url: "https://www.youtube.com/@fakharstemsphere", note: "YouTube channel — check their entry test playlists" },
       ],
     },
     lums: {

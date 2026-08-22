@@ -51,7 +51,7 @@ export const ur: Translation = {
         { name: "Khan Academy", url: "https://www.khanacademy.org", note: "مفت ریاضی اور انگریزی لیکچرز" },
         { name: "QuizWing", url: "https://quizwing.com/entry-test/fast-nu-admission-guide/", note: "مفت FAST پرانے پیپرز اور موک ٹیسٹ" },
         { name: "PakAdmissions", url: "https://www.pakadmissions.com/blog/fast-entry-test-complete-guide-free-practice-quiz", note: "مفت چیپٹر وائز پریکٹس" },
-        { name: "Fakhar STEM Sphere", url: "https://www.youtube.com/@fakharstemsphere", note: "یوٹیوب · FAST لیکچرر" },
+        { name: "Fakhar STEM Sphere", url: "https://www.youtube.com/@fakharstemsphere", note: "یوٹیوب چینل — ان کے انٹری ٹیسٹ پلے لسٹ دیکھیں" },
       ],
     },
     lums: {

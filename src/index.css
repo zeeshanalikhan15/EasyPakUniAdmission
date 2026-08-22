@@ -32,3 +32,12 @@
     cursor: pointer;
   }
 }
+
+/* Urdu (Nastaliq) glyphs are tall — keep generous line spacing even where a
+   tighter `leading-*` utility is applied. (Un-layered so it beats the utility
+   layer.) */
+html[dir="rtl"] .leading-tight,
+html[dir="rtl"] .leading-snug,
+html[dir="rtl"] .leading-relaxed {
+  line-height: 2;
+}
