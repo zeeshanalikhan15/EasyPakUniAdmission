@@ -10,18 +10,25 @@ function App() {
   const upcoming = nextEvents(universities, 3)
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen" id="top">
       <header className="sticky top-0 z-20 border-b border-stone-200 bg-[#f6f4ef]/95 backdrop-blur">
         <div className="mx-auto max-w-2xl px-4">
           <div className="flex items-center justify-between gap-3 py-3">
-            <div className="flex items-center gap-2">
+            <a
+              href="#top"
+              onClick={(e) => {
+                e.preventDefault()
+                window.scrollTo({ top: 0, behavior: "smooth" })
+              }}
+              className="flex items-center gap-2"
+            >
               <span className="text-2xl" aria-hidden="true">
                 🎓
               </span>
               <h1 className="text-lg font-extrabold leading-tight text-stone-900">
                 {t("common.appName")}
               </h1>
-            </div>
+            </a>
             <LanguageToggle />
           </div>
           <nav
