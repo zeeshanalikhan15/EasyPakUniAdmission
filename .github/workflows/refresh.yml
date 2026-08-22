@@ -2,8 +2,10 @@ name: Refresh admission data
 
 on:
   schedule:
-    # Monthly on the 1st at 03:37 UTC (off-peak minute to avoid the :00 thundering herd)
-    - cron: '37 3 1 * *'
+    # Pakistan Standard Time (PKT) is UTC+5, no daylight saving.
+    # Off-peak minutes (07/13) avoid GitHub's top-of-hour scheduler load.
+    - cron: '7 7 * * 1'    # Monday 07:07 UTC  = 12:07 PKT (midday)
+    - cron: '7 13 * * 5'   # Friday 13:07 UTC  = 18:07 PKT (end of day)
   workflow_dispatch: {}
 
 permissions:
@@ -29,7 +31,7 @@ jobs:
         uses: peter-evans/create-pull-request@v7
         with:
           commit-message: 'chore: refresh admission data'
-          title: 'Monthly admission data refresh'
+          title: 'Admission data refresh'
           body: |
             Automated scrape of admission dates. Review before merging —
             merging into main redeploys the site.

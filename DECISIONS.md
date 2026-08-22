@@ -15,8 +15,9 @@ choice is made; don't delete old ones.
   because NUST alone has many near-term series deadlines worth surfacing.
 - **Scraper is safe-by-design**: an adapter returns `null` when it can't parse
   confidently, and the orchestrator leaves the existing JSON untouched.
-- **Monthly refresh opens a PR** (not auto-commit to main) so a human reviews
-  scraped dates before they reach the live site.
+- **Twice-weekly refresh opens a PR** (Monday midday + Friday end-of-day,
+  Pakistan time) — not auto-commit to main — so a human reviews scraped dates
+  before they reach the live site.
 
 ## 2026-08-22 — Deployment
 

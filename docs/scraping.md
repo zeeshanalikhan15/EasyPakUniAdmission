@@ -46,6 +46,7 @@ node scripts/scrape.mjs
 
 ## Automation
 
-`.github/workflows/refresh.yml` runs the scraper monthly (and on manual
-dispatch). If data changed, it opens a pull request; merging the PR triggers the
-normal deploy workflow, which rebuilds and publishes the site.
+`.github/workflows/refresh.yml` runs the scraper twice a week — Monday midday and
+Friday end-of-day, on Pakistan Standard Time (UTC+5) — plus on manual dispatch.
+If data changed, it opens a pull request; merging the PR triggers the normal
+deploy workflow, which rebuilds and publishes the site.
