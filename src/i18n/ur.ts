@@ -52,6 +52,7 @@ export const ur: Translation = {
         { name: "QuizWing", url: "https://quizwing.com/entry-test/fast-nu-admission-guide/", note: "مفت FAST پرانے پیپرز اور موک ٹیسٹ" },
         { name: "PakAdmissions", url: "https://www.pakadmissions.com/blog/fast-entry-test-complete-guide-free-practice-quiz", note: "مفت چیپٹر وائز پریکٹس" },
         { name: "Fakhar STEM Sphere", url: "https://www.youtube.com/@fakharstemsphere", note: "یوٹیوب چینل — ان کے انٹری ٹیسٹ پلے لسٹ دیکھیں" },
+        { name: "GoTest", url: "https://gotest.com.pk/entry-test/", note: "مفت MCQs، پرانے پیپرز اور موک ٹیسٹ" },
       ],
     },
     lums: {
@@ -99,6 +100,8 @@ export const ur: Translation = {
         { name: "TopGrade", url: "https://www.topgrade.pk/net-entry-test", note: "ویڈیو لیکچرز اور MCQs" },
         { name: "Physics Ka Manjan · Class 11", url: "https://www.youtube.com/playlist?list=PLG6V3xWznon93t0CIAhcGPcOaVhiF64td", note: "NET فزکس لیکچرز (پلے لسٹ)" },
         { name: "Physics Ka Manjan · Class 12", url: "https://www.youtube.com/playlist?list=PLG6V3xWznon_XbF37f_iACsbl5CxMebLZ", note: "NET فزکس لیکچرز (پلے لسٹ)" },
+        { name: "PakPrep", url: "https://www.pakprep.com", note: "NUST پرانے پیپرز اور MCQs" },
+        { name: "EntryTest.com", url: "https://www.entrytest.com/format/nust-engg.aspx", note: "NUST ٹیسٹ پیٹرن اور آن لائن کوئز" },
       ],
     },
     uet: {
@@ -121,6 +124,7 @@ export const ur: Translation = {
         { name: "QuizWing", url: "https://quizwing.com/entry-test/ecat-2026/ecat-past-papers/", note: "مفت ECAT پرانے پیپرز (2015–2025)" },
         { name: "Maqsad", url: "https://blog.maqsad.io/blog/ecat-test-preparation-practice-test-solved", note: "مفت حل شدہ ECAT MCQs" },
         { name: "TaleemGuru", url: "https://taleemguru.com/ecat-past-papers-complete-preparation-guide/", note: "ECAT پرانے پیپرز اور MCQs" },
+        { name: "EntryTest.com", url: "https://www.entrytest.com/tests/ecat.aspx", note: "ECAT پیٹرن اور نمونہ پیپرز" },
       ],
     },
     giki: {
@@ -142,6 +146,7 @@ export const ur: Translation = {
         { name: "Khan Academy", url: "https://www.khanacademy.org", note: "مفت ریاضی اور فزکس لیکچرز" },
         { name: "PLS Academy", url: "https://plsboost.com/giki/", note: "گکی پرانے پیپرز اور موک ٹیسٹ" },
         { name: "EntryTest.com", url: "https://www.entrytest.com/format/giki-engg-batchelor.aspx", note: "ٹیسٹ پیٹرن اور نمونہ MCQs" },
+        { name: "Examora", url: "https://www.examora.io/engineering-admissions-pakistan", note: "موک ٹیسٹ اور پرانے پیپرز" },
       ],
     },
     pucit: {
@@ -163,6 +168,7 @@ export const ur: Translation = {
         { name: "Khan Academy", url: "https://www.khanacademy.org", note: "مفت ریاضی اور انگریزی لیکچرز" },
         { name: "GoTest", url: "https://gotest.com.pk/admissions/pu-adp-admission/", note: "پی یو ایڈمیشن ٹیسٹ گائیڈ اور پریکٹس" },
         { name: "QuizWing", url: "https://quizwing.com/entry-test/", note: "مفت انٹری ٹیسٹ پرانے پیپرز اور موک ٹیسٹ" },
+        { name: "GoTest", url: "https://gotest.com.pk/entry-test/", note: "مفت MCQs، پرانے پیپرز اور موک ٹیسٹ" },
       ],
     },
   },

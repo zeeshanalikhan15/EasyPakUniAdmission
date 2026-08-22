@@ -52,6 +52,7 @@ export const en = {
         { name: "QuizWing", url: "https://quizwing.com/entry-test/fast-nu-admission-guide/", note: "Free FAST past papers & mock tests" },
         { name: "PakAdmissions", url: "https://www.pakadmissions.com/blog/fast-entry-test-complete-guide-free-practice-quiz", note: "Free chapter-wise practice" },
         { name: "Fakhar STEM Sphere", url: "https://www.youtube.com/@fakharstemsphere", note: "YouTube channel — check their entry test playlists" },
+        { name: "GoTest", url: "https://gotest.com.pk/entry-test/", note: "Free MCQs, past papers & mock tests" },
       ],
     },
     lums: {
@@ -99,6 +100,8 @@ export const en = {
         { name: "TopGrade", url: "https://www.topgrade.pk/net-entry-test", note: "Video lectures & MCQs" },
         { name: "Physics Ka Manjan · Class 11", url: "https://www.youtube.com/playlist?list=PLG6V3xWznon93t0CIAhcGPcOaVhiF64td", note: "NET Physics lectures (playlist)" },
         { name: "Physics Ka Manjan · Class 12", url: "https://www.youtube.com/playlist?list=PLG6V3xWznon_XbF37f_iACsbl5CxMebLZ", note: "NET Physics lectures (playlist)" },
+        { name: "PakPrep", url: "https://www.pakprep.com", note: "NUST past papers & MCQs" },
+        { name: "EntryTest.com", url: "https://www.entrytest.com/format/nust-engg.aspx", note: "NUST test pattern + online quiz" },
       ],
     },
     uet: {
@@ -121,6 +124,7 @@ export const en = {
         { name: "QuizWing", url: "https://quizwing.com/entry-test/ecat-2026/ecat-past-papers/", note: "Free ECAT past papers (2015–2025)" },
         { name: "Maqsad", url: "https://blog.maqsad.io/blog/ecat-test-preparation-practice-test-solved", note: "Free solved ECAT MCQs" },
         { name: "TaleemGuru", url: "https://taleemguru.com/ecat-past-papers-complete-preparation-guide/", note: "ECAT past papers + MCQs" },
+        { name: "EntryTest.com", url: "https://www.entrytest.com/tests/ecat.aspx", note: "ECAT pattern + sample papers" },
       ],
     },
     giki: {
@@ -142,6 +146,7 @@ export const en = {
         { name: "Khan Academy", url: "https://www.khanacademy.org", note: "Free Math & Physics lessons" },
         { name: "PLS Academy", url: "https://plsboost.com/giki/", note: "GIKI past papers & mock tests" },
         { name: "EntryTest.com", url: "https://www.entrytest.com/format/giki-engg-batchelor.aspx", note: "Test pattern & sample MCQs" },
+        { name: "Examora", url: "https://www.examora.io/engineering-admissions-pakistan", note: "Mock tests & past papers" },
       ],
     },
     pucit: {
@@ -163,6 +168,7 @@ export const en = {
         { name: "Khan Academy", url: "https://www.khanacademy.org", note: "Free Math & English lessons" },
         { name: "GoTest", url: "https://gotest.com.pk/admissions/pu-adp-admission/", note: "PU admission test guide & practice" },
         { name: "QuizWing", url: "https://quizwing.com/entry-test/", note: "Free entry test past papers & mocks" },
+        { name: "GoTest", url: "https://gotest.com.pk/entry-test/", note: "Free MCQs, past papers & mock tests" },
       ],
     },
   },
