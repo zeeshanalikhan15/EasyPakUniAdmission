@@ -19,7 +19,7 @@
   }
 
   html[dir="rtl"] body {
-    line-height: 2;
+    line-height: 2.4;
   }
 
   body {
@@ -39,5 +39,5 @@
 html[dir="rtl"] .leading-tight,
 html[dir="rtl"] .leading-snug,
 html[dir="rtl"] .leading-relaxed {
-  line-height: 2;
+  line-height: 2.4;
 }
