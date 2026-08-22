@@ -5,6 +5,7 @@ import nustJson from "./nust.json"
 import uetJson from "./uet.json"
 import gikiJson from "./giki.json"
 import pucitJson from "./pucit.json"
+import pieasJson from "./pieas.json"
 
 const VALID_TYPES = new Set([
   "applicationOpen",
@@ -42,6 +43,7 @@ export const universities: University[] = [
   validate(uetJson as unknown as University, "uet"),
   validate(gikiJson as unknown as University, "giki"),
   validate(pucitJson as unknown as University, "pucit"),
+  validate(pieasJson as unknown as University, "pieas"),
 ]
 
 export type { University, AdmissionCycle, AdmissionEvent, EventType } from "./types"

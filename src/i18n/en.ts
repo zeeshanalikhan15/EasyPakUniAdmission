@@ -170,6 +170,27 @@ export const en = {
         { name: "QuizWing", url: "https://quizwing.com/entry-test/", note: "Free entry test past papers & mocks" },
       ],
     },
+    pieas: {
+      name: "PIEAS",
+      fullName: "Pakistan Institute of Engineering and Applied Sciences",
+      testName: "PIEAS Admission Test",
+      desc: "A leading public institute in Islamabad for engineering and applied sciences, known for strong physics, engineering and computer science programmes.",
+      feeNote: "application processing fee (non-refundable)",
+      eligibility:
+        "60% in Matric and 60% in Intermediate. FSc Pre-Engineering, Pre-Medical with Additional Mathematics, or ICS with Mathematics. Merit = Entry Test 60% + Matric 15% + FSc Part-I 25%.",
+      steps: [
+        "Create an account at admissions.pieas.edu.pk with your email and CNIC / B-Form.",
+        "Fill the online form, upload documents and pay the Rs. 3,500 fee.",
+        "Download your admit card and appear in the PIEAS entry test.",
+        "If eligible, appear in the second test (the higher score counts).",
+        "Check the merit list and complete admission formalities.",
+      ],
+      resources: [
+        { name: "Khan Academy", url: "https://www.khanacademy.org", note: "Free Math & Physics lessons" },
+        { name: "GoTest", url: "https://gotest.com.pk/entry-test/", note: "Free MCQs, past papers & mock tests" },
+        { name: "PakPrep", url: "https://www.pakprep.com", note: "Past papers & MCQs" },
+      ],
+    },
   },
 }
 

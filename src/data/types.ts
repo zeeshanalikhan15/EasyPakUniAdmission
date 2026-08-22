@@ -40,7 +40,7 @@ export interface AdmissionCycle {
 }
 
 export interface University {
-  id: "fast" | "lums" | "nust" | "uet" | "giki" | "pucit"
+  id: "fast" | "lums" | "nust" | "uet" | "giki" | "pucit" | "pieas"
   /** Latin brand short name, shown as a badge in both languages */
   shortName: string
   emoji: string

@@ -32,14 +32,14 @@ function App() {
             <LanguageToggle />
           </div>
           <nav
-            className="-mx-1 flex gap-2 overflow-x-auto px-1 pb-2"
+            className="flex flex-wrap gap-2 pb-2"
             aria-label="Universities"
           >
             {universities.map((uni) => (
               <a
                 key={uni.id}
                 href={`#${uni.id}`}
-                className="flex shrink-0 items-center gap-1.5 rounded-full bg-white px-3 py-1.5 text-sm font-semibold text-stone-700 ring-1 ring-stone-300 transition hover:bg-stone-100"
+                className="flex items-center gap-1.5 rounded-full bg-white px-3 py-1.5 text-sm font-semibold text-stone-700 ring-1 ring-stone-300 transition hover:bg-stone-100"
               >
                 <span aria-hidden="true">{uni.emoji}</span>
                 {uni.shortName}

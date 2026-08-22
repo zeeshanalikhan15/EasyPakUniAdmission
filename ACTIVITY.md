@@ -20,6 +20,7 @@ Running log of what's been done (newest last).
 - Added NUST NET Physics playlists (Physics Ka Manjan · Class 11 & 12).
 - Added three more universities: UET, GIKI and PUCIT (data + bilingual content + resources).
 - Increased Urdu line spacing (Nastaliq) so lines no longer merge; marked channel resources to check their entry test playlists.
+- Added PIEAS university (data + bilingual content + resources).
 - Recorded the update workflow: on each "update", also refresh the resources list.
 - Fixed "upcoming" logic: only actionable events (apply/register/test) count as
   upcoming, so a closed cycle with a future "classes begin" no longer shows old dates.
