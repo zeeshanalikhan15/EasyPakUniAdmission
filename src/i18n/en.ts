@@ -2,7 +2,7 @@ export const en = {
   common: {
     appName: "University Admissions — Pakistan",
     tagline:
-      "Admission dates, entry tests and how to apply — in simple Urdu, all in one place.",
+      "Admission dates, entry tests and how to apply — all in one place.",
     nextUpcoming: "Next upcoming",
     daysLeft: "days left",
     howToApply: "How to apply",
