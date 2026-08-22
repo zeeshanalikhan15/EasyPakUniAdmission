@@ -97,6 +97,8 @@ export const ur: Translation = {
         { name: "Mega Lecture · Math", url: "https://megalecture.com/courses/net-mathematics/", note: "مفت NET ریاضی لیکچرز" },
         { name: "QuizWing", url: "https://quizwing.com/entry-test/nust-net/", note: "مفت NUST پرانے پیپرز اور موک ٹیسٹ" },
         { name: "TopGrade", url: "https://www.topgrade.pk/net-entry-test", note: "ویڈیو لیکچرز اور MCQs" },
+        { name: "Physics Ka Manjan · Class 11", url: "https://www.youtube.com/playlist?list=PLG6V3xWznon93t0CIAhcGPcOaVhiF64td", note: "NET فزکس لیکچرز (پلے لسٹ)" },
+        { name: "Physics Ka Manjan · Class 12", url: "https://www.youtube.com/playlist?list=PLG6V3xWznon_XbF37f_iACsbl5CxMebLZ", note: "NET فزکس لیکچرز (پلے لسٹ)" },
       ],
     },
   },

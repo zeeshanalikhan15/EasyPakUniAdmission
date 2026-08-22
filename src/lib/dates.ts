@@ -1,6 +1,26 @@
-import type { AdmissionEvent, University } from "../data/types"
+import type { AdmissionEvent, EventType, University } from "../data/types"
 
 const toDate = (iso: string) => new Date(`${iso}T00:00:00`)
+
+// Events a student acts on (apply / register / take a test). "Outcome" events
+// (merit, decisions, classes) happen after the process and must not be treated
+// as the "next thing to do" — otherwise a cycle whose only future date is
+// "classes begin" would show its old, closed admission dates as "upcoming".
+const ACTIONABLE: EventType[] = [
+  "applicationOpen",
+  "applicationClose",
+  "registrationOpen",
+  "registrationClose",
+  "test",
+  "docsDeadline",
+  "financialAid",
+  "satDeadline",
+  "actDeadline",
+]
+
+function isActionable(e: AdmissionEvent): boolean {
+  return ACTIONABLE.includes(e.type)
+}
 
 /** Whole days from today until the given date (negative = past). */
 export function daysUntil(iso: string): number {
@@ -39,21 +59,14 @@ export function countdownTarget(e: AdmissionEvent): string {
   return daysUntil(e.date) >= 0 ? e.date : (e.endDate ?? e.date)
 }
 
-/** Earliest upcoming event in a cycle, or null if the cycle is fully in the past. */
+/**
+ * Earliest *actionable* upcoming event in a cycle, or null if the cycle's
+ * apply/test phase is over (a future "classes begin" alone does not count).
+ */
 export function nextEventInCycle(events: AdmissionEvent[]): AdmissionEvent | null {
-  const upcoming = events.filter(eventIsUpcoming)
+  const upcoming = events.filter((e) => isActionable(e) && eventIsUpcoming(e))
   if (upcoming.length === 0) return null
   return upcoming.reduce((a, b) => (countdownTarget(a) < countdownTarget(b) ? a : b))
-}
-
-/** Earliest upcoming event across all of a university's cycles. */
-export function nextEventInUniversity(uni: University): AdmissionEvent | null {
-  let best: AdmissionEvent | null = null
-  for (const c of uni.cycles) {
-    const n = nextEventInCycle(c.events)
-    if (n && (best === null || countdownTarget(n) < countdownTarget(best))) best = n
-  }
-  return best
 }
 
 export interface UpcomingEvent {
@@ -62,12 +75,12 @@ export interface UpcomingEvent {
   days: number
 }
 
-/** The `count` soonest upcoming events across all universities. */
+/** The `count` soonest actionable upcoming events across all universities. */
 export function nextEvents(unis: University[], count: number): UpcomingEvent[] {
   const all: UpcomingEvent[] = unis.flatMap((uni) =>
     uni.cycles.flatMap((cycle) =>
       cycle.events
-        .filter(eventIsUpcoming)
+        .filter((e) => isActionable(e) && eventIsUpcoming(e))
         .map((event) => ({ uni, event, days: daysUntil(countdownTarget(event)) })),
     ),
   )

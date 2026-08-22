@@ -17,7 +17,10 @@ Running log of what's been done (newest last).
   each university so you don't have to scroll the whole page.
 - Added a "Test preparation" section per university (YouTube channels, free
   websites, Khan Academy).
+- Added NUST NET Physics playlists (Physics Ka Manjan · Class 11 & 12).
 - Recorded the update workflow: on each "update", also refresh the resources list.
+- Fixed "upcoming" logic: only actionable events (apply/register/test) count as
+  upcoming, so a closed cycle with a future "classes begin" no longer shows old dates.
 
 ## 2026-08-22
 

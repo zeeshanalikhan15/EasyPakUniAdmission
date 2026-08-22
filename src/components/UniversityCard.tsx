@@ -155,6 +155,7 @@ export default function UniversityCard({ uni }: { uni: University }) {
           </h3>
           <ul className="mt-2 space-y-2">
             {u.resources.map((r) => {
+              const isPlaylist = /youtube\.com\/playlist/.test(r.url)
               const isYouTube = /youtube\.com|youtu\.be/.test(r.url)
               return (
                 <li key={r.url}>
@@ -165,7 +166,7 @@ export default function UniversityCard({ uni }: { uni: University }) {
                     className="flex items-start gap-2"
                   >
                     <span className="mt-0.5 shrink-0" aria-hidden="true">
-                      {isYouTube ? "▶️" : "🌐"}
+                      {isPlaylist ? "🎞️" : isYouTube ? "▶️" : "🌐"}
                     </span>
                     <span className="min-w-0">
                       <span className="block text-sm font-semibold text-stone-800 underline-offset-2 hover:underline">
