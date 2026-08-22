@@ -1,0 +1,32 @@
+{
+  "id": "pucit",
+  "shortName": "PUCIT",
+  "emoji": "🖥️",
+  "color": "#0d9488",
+  "applyUrl": "https://admissiontest.pu.edu.pk",
+  "fee": 2500,
+  "cycles": [
+    {
+      "id": "fall-2027",
+      "title": "Fall 2027",
+      "events": [
+        { "type": "applicationOpen", "date": "2027-03-30", "tentative": true },
+        { "type": "registrationClose", "date": "2027-05-25", "tentative": true },
+        { "type": "test", "series": "1st", "date": "2027-06-14", "tentative": true },
+        { "type": "test", "series": "2nd", "date": "2027-07-19", "tentative": true },
+        { "type": "applicationClose", "date": "2027-08-04", "tentative": true }
+      ]
+    },
+    {
+      "id": "fall-2026",
+      "title": "Fall 2026",
+      "events": [
+        { "type": "applicationOpen", "date": "2026-03-30" },
+        { "type": "registrationClose", "date": "2026-05-25" },
+        { "type": "test", "series": "1st", "date": "2026-06-14" },
+        { "type": "test", "series": "2nd", "date": "2026-07-19" },
+        { "type": "applicationClose", "date": "2026-08-04" }
+      ]
+    }
+  ]
+}

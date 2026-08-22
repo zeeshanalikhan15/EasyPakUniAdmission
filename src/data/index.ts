@@ -2,6 +2,9 @@ import type { University } from "./types"
 import fastJson from "./fast.json"
 import lumsJson from "./lums.json"
 import nustJson from "./nust.json"
+import uetJson from "./uet.json"
+import gikiJson from "./giki.json"
+import pucitJson from "./pucit.json"
 
 const VALID_TYPES = new Set([
   "applicationOpen",
@@ -36,6 +39,9 @@ export const universities: University[] = [
   validate(fastJson as unknown as University, "fast"),
   validate(lumsJson as unknown as University, "lums"),
   validate(nustJson as unknown as University, "nust"),
+  validate(uetJson as unknown as University, "uet"),
+  validate(gikiJson as unknown as University, "giki"),
+  validate(pucitJson as unknown as University, "pucit"),
 ]
 
 export type { University, AdmissionCycle, AdmissionEvent, EventType } from "./types"

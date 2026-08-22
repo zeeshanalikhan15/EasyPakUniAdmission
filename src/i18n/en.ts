@@ -101,6 +101,70 @@ export const en = {
         { name: "Physics Ka Manjan · Class 12", url: "https://www.youtube.com/playlist?list=PLG6V3xWznon_XbF37f_iACsbl5CxMebLZ", note: "NET Physics lectures (playlist)" },
       ],
     },
+    uet: {
+      name: "UET Lahore",
+      fullName: "University of Engineering and Technology, Lahore",
+      testName: "ECAT (Engineering College Admission Test)",
+      desc: "Pakistan's oldest and largest engineering university, offering engineering, computing and technology programmes.",
+      feeNote: "ECAT entry test token (non-refundable)",
+      eligibility:
+        "F.Sc (Pre-Engineering) with at least 60% marks (Physics, Chemistry, Mathematics). Computing programmes need 50–60% with Mathematics. Merit = Intermediate 70% + ECAT 30%. Punjab domicile for open merit.",
+      steps: [
+        "Register for ECAT at admission.uet.edu.pk and pay the Rs. 3,000 token.",
+        "Appear in ECAT at your allotted centre.",
+        "After ECAT, separately apply for admission and select programme/campus preferences.",
+        "Pay the admission processing fee and submit documents.",
+        "Check merit lists and complete admission formalities.",
+      ],
+      resources: [
+        { name: "Khan Academy", url: "https://www.khanacademy.org", note: "Free Math & Physics lessons" },
+        { name: "QuizWing", url: "https://quizwing.com/entry-test/ecat-2026/ecat-past-papers/", note: "Free ECAT past papers (2015–2025)" },
+        { name: "Maqsad", url: "https://blog.maqsad.io/blog/ecat-test-preparation-practice-test-solved", note: "Free solved ECAT MCQs" },
+        { name: "TaleemGuru", url: "https://taleemguru.com/ecat-past-papers-complete-preparation-guide/", note: "ECAT past papers + MCQs" },
+      ],
+    },
+    giki: {
+      name: "GIKI",
+      fullName: "Ghulam Ishaq Khan Institute of Engineering Sciences and Technology",
+      testName: "GIKI Admission Test",
+      desc: "A top private engineering institute in Topi, Swabi, known for rigorous academics and a strong engineering reputation.",
+      feeNote: "application processing fee (non-refundable)",
+      eligibility:
+        "F.Sc (Pre-Engineering) with at least 60% (Physics, Chemistry, Mathematics). ICS for computing programmes; Pre-Medical needs Additional Mathematics. Merit = GIKI Test 85% + Matric 15%.",
+      steps: [
+        "Create an account at admissions.giki.edu.pk with your email and CNIC / B-Form.",
+        "Fill the online form with academic details and programme preferences.",
+        "Upload documents and pay the Rs. 3,000 application fee.",
+        "Select your test centre and download your admit card.",
+        "Appear in the GIKI Admission Test.",
+      ],
+      resources: [
+        { name: "Khan Academy", url: "https://www.khanacademy.org", note: "Free Math & Physics lessons" },
+        { name: "PLS Academy", url: "https://plsboost.com/giki/", note: "GIKI past papers & mock tests" },
+        { name: "EntryTest.com", url: "https://www.entrytest.com/format/giki-engg-batchelor.aspx", note: "Test pattern & sample MCQs" },
+      ],
+    },
+    pucit: {
+      name: "PUCIT",
+      fullName: "Punjab University College of Information Technology",
+      testName: "PU Admission Test",
+      desc: "University of the Punjab's faculty of computing, offering BS Computer Science, Software Engineering, IT and Data Science.",
+      feeNote: "PU admission test fee (non-refundable)",
+      eligibility:
+        "HSSC / Intermediate (passed or awaiting result). ICS with Physics or Statistics for Computer Science. Merit = PU Test 25% + Intermediate 75%.",
+      steps: [
+        "Register for the PU admission test at admissiontest.pu.edu.pk and pay the Rs. 2,500 fee.",
+        "Download your admit card and appear in the test.",
+        "After the test, apply for admission and select BS CS/SE/IT preferences.",
+        "Upload documents and complete the admission application.",
+        "Check merit lists on pu.edu.pk.",
+      ],
+      resources: [
+        { name: "Khan Academy", url: "https://www.khanacademy.org", note: "Free Math & English lessons" },
+        { name: "GoTest", url: "https://gotest.com.pk/admissions/pu-adp-admission/", note: "PU admission test guide & practice" },
+        { name: "QuizWing", url: "https://quizwing.com/entry-test/", note: "Free entry test past papers & mocks" },
+      ],
+    },
   },
 }
 
