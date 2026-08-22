@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react"
 import { useTranslation } from "react-i18next"
 import { universities } from "./data"
 import { countdownTarget, formatDate, nextEvents } from "./lib/dates"
@@ -8,10 +9,23 @@ function App() {
   const { t, i18n } = useTranslation()
   const lang = i18n.language
   const upcoming = nextEvents(universities, 3)
+  const headerRef = useRef<HTMLElement>(null)
+
+  useEffect(() => {
+    const el = headerRef.current
+    if (!el) return
+    const update = () => {
+      document.documentElement.style.scrollPaddingTop = `${el.offsetHeight + 8}px`
+    }
+    update()
+    const observer = new ResizeObserver(update)
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [])
 
   return (
     <div className="min-h-screen" id="top">
-      <header className="sticky top-0 z-20 border-b border-stone-200 bg-[#f6f4ef]/95 backdrop-blur">
+      <header ref={headerRef} className="sticky top-0 z-20 border-b border-stone-200 bg-[#f6f4ef]/95 backdrop-blur">
         <div className="mx-auto max-w-2xl px-4">
           <div className="flex items-center justify-between gap-3 py-3">
             <a
@@ -95,7 +109,7 @@ function App() {
 
         <div className="mt-6 space-y-6">
           {universities.map((uni) => (
-            <section key={uni.id} id={uni.id} className="scroll-mt-32">
+            <section key={uni.id} id={uni.id}>
               <UniversityCard uni={uni} />
             </section>
           ))}
