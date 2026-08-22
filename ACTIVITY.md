@@ -13,6 +13,8 @@ Running log of what's been done (newest last).
 - Removed the scraper (`scripts/`), the scheduled refresh workflow, and
   `docs/scraping.md` — automated scraping doesn't work for these sites, so dates
   are updated manually via web research instead.
+- Moved the "dates change yearly" notice to the top and added a jump-nav to
+  each university so you don't have to scroll the whole page.
 
 ## 2026-08-22
 

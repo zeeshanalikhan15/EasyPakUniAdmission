@@ -11,22 +11,46 @@ function App() {
 
   return (
     <div className="min-h-screen">
-      <header className="sticky top-0 z-10 border-b border-stone-200 bg-[#f6f4ef]/90 backdrop-blur">
-        <div className="mx-auto flex max-w-2xl items-center justify-between gap-3 px-4 py-3">
-          <div className="flex items-center gap-2">
-            <span className="text-2xl" aria-hidden="true">
-              🎓
-            </span>
-            <h1 className="text-lg font-extrabold leading-tight text-stone-900">
-              {t("common.appName")}
-            </h1>
+      <header className="sticky top-0 z-20 border-b border-stone-200 bg-[#f6f4ef]/95 backdrop-blur">
+        <div className="mx-auto max-w-2xl px-4">
+          <div className="flex items-center justify-between gap-3 py-3">
+            <div className="flex items-center gap-2">
+              <span className="text-2xl" aria-hidden="true">
+                🎓
+              </span>
+              <h1 className="text-lg font-extrabold leading-tight text-stone-900">
+                {t("common.appName")}
+              </h1>
+            </div>
+            <LanguageToggle />
           </div>
-          <LanguageToggle />
+          <nav
+            className="-mx-1 flex gap-2 overflow-x-auto px-1 pb-2"
+            aria-label="Universities"
+          >
+            {universities.map((uni) => (
+              <a
+                key={uni.id}
+                href={`#${uni.id}`}
+                className="flex shrink-0 items-center gap-1.5 rounded-full bg-white px-3 py-1.5 text-sm font-semibold text-stone-700 ring-1 ring-stone-300 transition hover:bg-stone-100"
+              >
+                <span aria-hidden="true">{uni.emoji}</span>
+                {uni.shortName}
+              </a>
+            ))}
+          </nav>
         </div>
       </header>
 
       <main className="mx-auto max-w-2xl px-4 pb-16 pt-6">
         <p className="text-sm text-stone-600">{t("common.tagline")}</p>
+
+        <p className="mt-4 flex items-start gap-2 rounded-xl bg-amber-50 p-3 text-xs leading-relaxed text-amber-800 ring-1 ring-amber-200">
+          <span className="shrink-0" aria-hidden="true">
+            ⚠️
+          </span>
+          <span>{t("common.disclaimer")}</span>
+        </p>
 
         {upcoming.length > 0 && (
           <div className="mt-4 rounded-2xl bg-emerald-800 p-4 text-white shadow-sm">
@@ -64,13 +88,11 @@ function App() {
 
         <div className="mt-6 space-y-6">
           {universities.map((uni) => (
-            <UniversityCard key={uni.id} uni={uni} />
+            <section key={uni.id} id={uni.id} className="scroll-mt-32">
+              <UniversityCard uni={uni} />
+            </section>
           ))}
         </div>
-
-        <p className="mt-8 rounded-xl bg-amber-50 p-4 text-xs leading-relaxed text-amber-800 ring-1 ring-amber-200">
-          {t("common.disclaimer")}
-        </p>
       </main>
     </div>
   )
