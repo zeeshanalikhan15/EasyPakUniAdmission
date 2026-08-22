@@ -3,21 +3,20 @@
 Key decisions for this project and why. Add a dated entry when a significant
 choice is made; don't delete old ones.
 
-## 2026-08-23 — Per-university JSON data + scraper
+## 2026-08-23 — Per-university JSON data, no automated scraping
 
 - **Data lives in `src/data/<id>.json`** (one file per university) with a shared
-  schema in `src/data/types.ts`. Chose JSON over TS because the scraper can
-  read/write it cleanly and it's machine-diffable.
+  schema in `src/data/types.ts`. JSON (not TS) so it's easy to read/edit and
+  machine-diffable.
 - **Event model uses a `type` enum + optional `series`** (e.g. `type: "test",
-  series: "Series 1"`). This lets NUST's 2–4 NET series each carry their own
-  registration + test dates, while the app still auto-translates the type.
-- **"Next upcoming" shows the 3 closest events** (not a single "next deadline"),
-  because NUST alone has many near-term series deadlines worth surfacing.
-- **Scraper is safe-by-design**: an adapter returns `null` when it can't parse
-  confidently, and the orchestrator leaves the existing JSON untouched.
-- **Twice-weekly refresh opens a PR** (Monday midday + Friday end-of-day,
-  Pakistan time) — not auto-commit to main — so a human reviews scraped dates
-  before they reach the live site.
+  series: "Series 1"`) so NUST's 2–4 NET series each carry their own
+  registration + test dates, while the app auto-translates the type.
+- **"Next upcoming" shows the 3 closest events** (not a single "next deadline").
+- **No automated scraping.** These universities have no stable API (LUMS is a
+  JS single-page app, NUST bot-blocks, and dates change yearly), so an
+  auto-scraper can't run reliably. Dates are updated manually via web research.
+  (A scraper + scheduled GitHub Actions workflow was built, then removed for
+  this reason.)
 
 ## 2026-08-22 — Deployment
 
