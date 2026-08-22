@@ -1,0 +1,49 @@
+# Pakistani University Admissions (EasyPakUniAdmission)
+
+> Admission dates, entry tests, fees and how-to-apply for Pakistani universities — in Urdu and English, made for F.Sc. students.
+
+## What this site is
+
+A single-page guide to undergraduate admission schedules for Pakistani universities. Each university shows: admission dates (upcoming + last cycle), the entry test, application fee, eligibility, a step-by-step "how to apply", and free test-prep resources.
+
+## Universities
+
+### FAST NUCES (National University of Computer & Emerging Sciences)
+- Entry test: FAST NU Admission Test
+- Application fee: Rs. 3,000
+- Apply: https://admissions.nu.edu.pk
+
+### LUMS (Lahore University of Management Sciences)
+- Entry test: LCAT (or SAT / ACT)
+- Application fee: PKR 11,500
+- Apply: https://admissions.lums.edu.pk
+
+### NUST (National University of Sciences and Technology)
+- Entry test: NET (NUST Entry Test)
+- Application fee: Rs. 5,000 per NET attempt
+- Apply: https://ugadmissions.nust.edu.pk
+
+### UET Lahore (University of Engineering and Technology)
+- Entry test: ECAT (Engineering College Admission Test)
+- Application fee: Rs. 3,000 (ECAT token)
+- Apply: https://admission.uet.edu.pk
+
+### GIKI (Ghulam Ishaq Khan Institute of Engineering Sciences and Technology)
+- Entry test: GIKI Admission Test
+- Application fee: Rs. 3,000
+- Apply: https://admissions.giki.edu.pk
+
+### PUCIT (Punjab University College of Information Technology)
+- Entry test: PU Admission Test
+- Application fee: Rs. 2,500
+- Apply: https://admissiontest.pu.edu.pk
+
+### PIEAS (Pakistan Institute of Engineering and Applied Sciences)
+- Entry test: PIEAS Admission Test
+- Application fee: Rs. 3,500
+- Apply: https://admissions.pieas.edu.pk
+
+## Notes
+
+- Dates change every year. Always confirm on the official website before applying.
+- The live site shows current/upcoming dates with countdowns: https://zeeshanalikhan15.github.io/EasyPakUniAdmission/
