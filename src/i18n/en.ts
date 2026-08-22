@@ -168,7 +168,6 @@ export const en = {
         { name: "Khan Academy", url: "https://www.khanacademy.org", note: "Free Math & English lessons" },
         { name: "GoTest", url: "https://gotest.com.pk/admissions/pu-adp-admission/", note: "PU admission test guide & practice" },
         { name: "QuizWing", url: "https://quizwing.com/entry-test/", note: "Free entry test past papers & mocks" },
-        { name: "GoTest", url: "https://gotest.com.pk/entry-test/", note: "Free MCQs, past papers & mock tests" },
       ],
     },
   },

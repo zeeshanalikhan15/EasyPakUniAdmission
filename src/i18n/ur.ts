@@ -168,7 +168,6 @@ export const ur: Translation = {
         { name: "Khan Academy", url: "https://www.khanacademy.org", note: "مفت ریاضی اور انگریزی لیکچرز" },
         { name: "GoTest", url: "https://gotest.com.pk/admissions/pu-adp-admission/", note: "پی یو ایڈمیشن ٹیسٹ گائیڈ اور پریکٹس" },
         { name: "QuizWing", url: "https://quizwing.com/entry-test/", note: "مفت انٹری ٹیسٹ پرانے پیپرز اور موک ٹیسٹ" },
-        { name: "GoTest", url: "https://gotest.com.pk/entry-test/", note: "مفت MCQs، پرانے پیپرز اور موک ٹیسٹ" },
       ],
     },
   },
