@@ -26,4 +26,4 @@ jobs:
           npm i playwright >/dev/null
           npx playwright install --with-deps chromium
       - name: Headless Chromium probes
-        run: node .github/probe-browser.js
+        run: node .github/probe-browser.cjs
