@@ -24,6 +24,12 @@ Running log of what's been done (newest last).
 - Recorded the update workflow: on each "update", also refresh the resources list.
 - Fixed "upcoming" logic: only actionable events (apply/register/test) count as
   upcoming, so a closed cycle with a future "classes begin" no longer shows old dates.
+- Added a "BS programmes offered" section to each university card — linked chips
+  pointing to each programme's official page or department.
+- Corrected programme lists while adding links: removed UET "BSc Software
+  Engineering" (UET offers it only at MSc level), fixed PIEAS to its six actual
+  BS programmes (no BS Nuclear/Mathematics), and completed GIKI to all 13
+  (added Cyber Security, Engineering Sciences, Management Sciences).
 
 ## 2026-08-22
 

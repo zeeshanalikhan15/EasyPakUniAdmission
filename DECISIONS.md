@@ -24,6 +24,20 @@ When the user asks to "update" the admission data:
   (A scraper + scheduled GitHub Actions workflow was built, then removed for
   this reason.)
 
+## 2026-08-23 — BS programmes listed per university
+
+- Each university card now lists its **BS programmes** as linked chips (a
+  `programs: { name, url }[]` list in `src/i18n/en.ts` + `ur.ts`, rendered in
+  `UniversityCard.tsx`).
+- **Descriptive content lives in i18n, not JSON** — the JSON files only carry
+  dates/cycles (the scraper contract); programme names, eligibility, steps,
+  resources and links are hand-curated in `en.ts`/`ur.ts`.
+- **Links point to the official programme/department page where one exists**
+  (FAST, LUMS, PUCIT, UET, GIKI, PIEAS each have per-program or per-department
+  URLs). NUST is bot-blocked (Cloudflare 403), so its programmes link to the
+  single undergraduate category page; per-program pages there aren't cleanly
+  addressable.
+
 ## 2026-08-22 — Deployment
 
 - **Deploy via GitHub Pages "legacy" mode from a `prod` branch** — mirrors
