@@ -1,0 +1,32 @@
+name: Scrape GIKI
+
+on:
+  schedule:
+    - cron: "15 2 * * 0"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "lts/*"
+      - run: npm ci
+      - name: Scrape GIKI admission schedule
+        run: node scripts/scrapers/giki.mjs
+      - name: Commit & push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet; then
+            echo "No change."
+          else
+            git add src/data/giki.json
+            git commit -m "chore: update GIKI admission data (scraper)"
+            git push
+          fi
