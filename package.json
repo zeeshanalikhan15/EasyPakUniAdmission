@@ -25,7 +25,6 @@
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.4",
     "oxlint": "^1.75.0",
-    "pdfjs-dist": "^6.2.108",
     "playwright": "^1.62.1",
     "typescript": "~6.0.2",
     "vite": "^8.2.0"
