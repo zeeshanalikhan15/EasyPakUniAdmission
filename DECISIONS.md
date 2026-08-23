@@ -38,7 +38,7 @@ When the user asks to "update" the admission data:
   auto-commits to `main`. The safety net is the **validation gate**
   (`scripts/validate.mjs`), which blocks the commit (and fails the job, so
   GitHub emails) if the data is malformed or has implausible dates.
-- **Weekly, Tuesday, staggered cron.** Access: FAST/GIKI/PIEAS/LUMS/PUCIT via
+- **Daily, staggered cron.** Access: FAST/GIKI/PIEAS/LUMS/PUCIT via
   plain HTTPS; NUST via Playwright (Cloudflare); UET held (site down `522`).
 - **Coverage: 6 of 7.** UET is parked on the `scraper-uet` branch until its
   server recovers (issue #3).
