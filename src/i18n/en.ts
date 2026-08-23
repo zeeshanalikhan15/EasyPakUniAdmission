@@ -11,6 +11,7 @@ export const en = {
     testPrep: "Test preparation",
     eligibility: "Who can apply",
     programs: "BS programmes offered",
+    scholarships: "Scholarships & financial aid",
     applyNow: "Apply now",
     upcoming: "Upcoming",
     pastCycle: "Last cycle (for reference)",
@@ -52,6 +53,13 @@ export const en = {
       feeNote: "non-refundable processing fee",
       eligibility:
         "FSc / ICS (Pre-Engineering) with at least 60% marks. Mathematics is compulsory for CS, SE, AI, Data Science and Cyber Security. Pre-Medical students need Additional Mathematics. BBA needs 50%.",
+      scholarships: {
+        summary:
+          "Merit scholarships for top position holders, need-based interest-free loans (Qarz-e-Hasna) and HEC scholarships.",
+        links: [
+          { name: "Scholarships & financial assistance", url: "https://www.nu.edu.pk/Admissions/Scholarship" },
+        ],
+      },
       steps: [
         "Create an account at admissions.nu.edu.pk with your email and CNIC / B-Form.",
         "Fill the online form: personal details, marks and programme choice.",
@@ -87,6 +95,14 @@ export const en = {
       feeNote: "application processing fee (non-refundable)",
       eligibility:
         "Matric + FSc / HSSC or O/A Levels with strong academics. Admission is holistic — marks, test score and profile all count.",
+      scholarships: {
+        summary:
+          "The National Outreach Programme (NOP) gives full scholarships to high-achieving underprivileged students; need-based financial aid and merit scholarships are also available.",
+        links: [
+          { name: "Financial aid & scholarships", url: "https://lums.edu.pk/financial-aid" },
+          { name: "National Outreach Programme (NOP)", url: "https://nop.lums.edu.pk/" },
+        ],
+      },
       steps: [
         "Create an account at admissions.lums.edu.pk.",
         "Complete the online application with academic and personal details.",
@@ -120,6 +136,14 @@ export const en = {
       feeNote: "per NET attempt (non-refundable)",
       eligibility:
         "At least 60% in Matric and 60% in FSc. Merit = NET 75% + FSc 15% + Matric 10%. You may appear in multiple NET series; the best score counts.",
+      scholarships: {
+        summary:
+          "Need-based financial aid (up to 4 years), merit awards for GPA 3.5+, plus Ehsaas, PEEF and Honhaar scholarships.",
+        links: [
+          { name: "Need-based financial aid", url: "https://nust.edu.pk/admissions/scholarships/need-based-financial-aid/" },
+          { name: "Financial Aid Office", url: "https://fao.nust.edu.pk/" },
+        ],
+      },
       steps: [
         "Create an account at ugadmissions.nust.edu.pk.",
         "Fill the form and choose your NET series and test city.",
@@ -158,6 +182,13 @@ export const en = {
       feeNote: "ECAT entry test token (non-refundable)",
       eligibility:
         "F.Sc (Pre-Engineering) with at least 60% marks (Physics, Chemistry, Mathematics). Computing programmes need 50–60% with Mathematics. Merit = Intermediate 70% + ECAT 30%. Punjab domicile for open merit.",
+      scholarships: {
+        summary:
+          "Merit scholarships, HEC need-based aid, PEEF, Ehsaas and interest-free Qarz-e-Hasna loans.",
+        links: [
+          { name: "Financial Aid & Career Services (FACS)", url: "https://facs.uet.edu.pk/" },
+        ],
+      },
       steps: [
         "Register for ECAT at admission.uet.edu.pk and pay the Rs. 3,000 token.",
         "Appear in ECAT at your allotted centre.",
@@ -196,6 +227,13 @@ export const en = {
       feeNote: "application processing fee (non-refundable)",
       eligibility:
         "F.Sc (Pre-Engineering) with at least 60% (Physics, Chemistry, Mathematics). ICS for computing programmes; Pre-Medical needs Additional Mathematics. Merit = GIKI Test 85% + Matric 15%.",
+      scholarships: {
+        summary:
+          "Generous need- and merit-based financial aid, fully funded merit scholarships and Qarz-e-Hasna loans.",
+        links: [
+          { name: "Scholarships & financial aid", url: "https://giki.edu.pk/admissions/admissions-undergraduates/scholarships-fa/" },
+        ],
+      },
       steps: [
         "Create an account at admissions.giki.edu.pk with your email and CNIC / B-Form.",
         "Fill the online form with academic details and programme preferences.",
@@ -224,6 +262,14 @@ export const en = {
       feeNote: "PU admission test fee (non-refundable)",
       eligibility:
         "HSSC / Intermediate (passed or awaiting result). ICS with Physics or Statistics for Computer Science. Merit = PU Test 25% + Intermediate 75%.",
+      scholarships: {
+        summary:
+          "Merit and need-based scholarships, HEC/PEEF funding and the Chief Minister's Honhaar Scholarship.",
+        links: [
+          { name: "Scholarships", url: "https://pucit.edu.pk/higher-education-scholarships/" },
+          { name: "PU scholarships & financial assistance", url: "https://pucit.edu.pk/university-of-the-punjab-scholarships-portfolio-financial-assistance-opportunities-for-new-entrants/" },
+        ],
+      },
       steps: [
         "Register for the PU admission test at admissiontest.pu.edu.pk and pay the Rs. 2,500 fee.",
         "Download your admit card and appear in the test.",
@@ -253,6 +299,13 @@ export const en = {
       feeNote: "application processing fee (non-refundable)",
       eligibility:
         "60% in Matric and 60% in Intermediate. FSc Pre-Engineering, Pre-Medical with Additional Mathematics, or ICS with Mathematics. Merit = Entry Test 60% + Matric 15% + FSc Part-I 25%.",
+      scholarships: {
+        summary:
+          "Merit and need-based scholarships, Qarz-e-Hasna loans and named awards like the Rizvee-Kidwai Scholarship for Computer Science.",
+        links: [
+          { name: "Scholarships", url: "https://www.pieas.edu.pk/scholarships/" },
+        ],
+      },
       steps: [
         "Create an account at admissions.pieas.edu.pk with your email and CNIC / B-Form.",
         "Fill the online form, upload documents and pay the Rs. 3,500 fee.",

@@ -30,6 +30,8 @@ Running log of what's been done (newest last).
   Engineering" (UET offers it only at MSc level), fixed PIEAS to its six actual
   BS programmes (no BS Nuclear/Mathematics), and completed GIKI to all 13
   (added Cyber Security, Engineering Sciences, Management Sciences).
+- Added a "Scholarships & financial aid" section to each university card — a
+  brief summary of the aid types plus links to the official financial-aid page.
 
 ## 2026-08-22
 

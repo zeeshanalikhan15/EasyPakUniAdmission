@@ -38,6 +38,13 @@ When the user asks to "update" the admission data:
   single undergraduate category page; per-program pages there aren't cleanly
   addressable.
 
+## 2026-08-23 — Scholarships & financial aid
+
+- Each card now shows a brief **"Scholarships & financial aid"** summary plus
+  links to the official financial-aid page (UET → `facs.uet.edu.pk`, NUST →
+  `fao.nust.edu.pk` + need-based-aid page, etc.). Same i18n pattern as
+  programmes: descriptive text and links live in `en.ts`/`ur.ts`.
+
 ## 2026-08-22 — Deployment
 
 - **Deploy via GitHub Pages "legacy" mode from a `prod` branch** — mirrors

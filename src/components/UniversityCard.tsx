@@ -16,6 +16,7 @@ interface UniContent {
   feeNote: string
   programs: { name: string; url: string }[]
   eligibility: string
+  scholarships: { summary: string; links: { name: string; url: string }[] }
   steps: string[]
   resources: { name: string; url: string; note: string }[]
 }
@@ -173,6 +174,29 @@ export default function UniversityCard({ uni }: { uni: University }) {
             {t("common.eligibility")}
           </h3>
           <p className="mt-1 text-sm text-stone-700">{u.eligibility}</p>
+        </section>
+
+        {/* Scholarships */}
+        <section className="mt-5">
+          <h3 className="text-sm font-bold uppercase tracking-wide text-stone-500">
+            {t("common.scholarships")}
+          </h3>
+          <p className="mt-1 text-sm text-stone-700">{u.scholarships.summary}</p>
+          <ul className="mt-2 space-y-1.5">
+            {u.scholarships.links.map((link) => (
+              <li key={link.url}>
+                <a
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-stone-800 underline-offset-2 hover:underline"
+                >
+                  <span aria-hidden="true">↗</span>
+                  {link.name}
+                </a>
+              </li>
+            ))}
+          </ul>
         </section>
 
         {/* Test preparation */}
