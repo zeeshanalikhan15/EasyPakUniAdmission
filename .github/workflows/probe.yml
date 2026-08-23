@@ -1,0 +1,29 @@
+name: Scraper probe
+
+on:
+  push:
+    branches: [scraper-probe]
+  workflow_dispatch:
+
+jobs:
+  curl-probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Curl probes (default vs browser headers)
+        run: bash .github/probe-curl.sh
+
+  browser-probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "lts/*"
+      - name: Install Playwright + Chromium
+        run: |
+          npm init -y >/dev/null
+          npm i playwright >/dev/null
+          npx playwright install --with-deps chromium
+      - name: Headless Chromium probes
+        run: node .github/probe-browser.js
