@@ -27,3 +27,5 @@ jobs:
           npx playwright install --with-deps chromium
       - name: Headless Chromium probes
         run: node .github/probe-browser.cjs
+      - name: Headless Chromium date-page probes
+        run: node .github/probe-dates.cjs
