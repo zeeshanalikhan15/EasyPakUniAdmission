@@ -29,3 +29,5 @@ jobs:
         run: node .github/probe-browser.cjs
       - name: Headless Chromium date-page probes
         run: node .github/probe-dates.cjs
+      - name: Headless Chromium table probes (NUST, UET)
+        run: node .github/probe-tables.cjs
