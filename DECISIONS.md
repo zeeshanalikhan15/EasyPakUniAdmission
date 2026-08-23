@@ -24,6 +24,25 @@ When the user asks to "update" the admission data:
   (A scraper + scheduled GitHub Actions workflow was built, then removed for
   this reason.)
 
+## 2026-08-23 — Admission scraper (weekly auto-update)
+
+**Supersedes the "no automated scraping" note above.** The earlier blockers
+(NUST bot-blocks, LUMS JS, yearly date changes) were solved with a real browser
+(Playwright) and targeted per-site parsers.
+
+- **One scraper + one workflow per university** (`scripts/scrapers/<id>.mjs` +
+  `.github/workflows/scrape-<id>.yml`) so changing one never affects another. A
+  shared `_lib.mjs` holds generic helpers (date/range parsing, cert-bypass
+  fetch, JSON upsert).
+- **Fully automated, no review gate** — the weekly run scrapes → validates →
+  auto-commits to `main`. The safety net is the **validation gate**
+  (`scripts/validate.mjs`), which blocks the commit (and fails the job, so
+  GitHub emails) if the data is malformed or has implausible dates.
+- **Weekly, Tuesday, staggered cron.** Access: FAST/GIKI/PIEAS/LUMS/PUCIT via
+  plain HTTPS; NUST via Playwright (Cloudflare); UET held (site down `522`).
+- **Coverage: 6 of 7.** UET is parked on the `scraper-uet` branch until its
+  server recovers (issue #3).
+
 ## 2026-08-23 — BS programmes listed per university
 
 - Each university card now lists its **BS programmes** as linked chips (a

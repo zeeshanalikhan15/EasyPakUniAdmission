@@ -32,6 +32,12 @@ Running log of what's been done (newest last).
   (added Cyber Security, Engineering Sciences, Management Sciences).
 - Added a "Scholarships & financial aid" section to each university card — a
   brief summary of the aid types plus links to the official financial-aid page.
+- Researched scraper feasibility from GitHub Actions (headless Chromium passes
+  Cloudflare for NUST/UET; curl is blocked), and mapped each university's actual
+  schedule page and format.
+- Built a per-university admission scraper + weekly (Tuesday) workflow for FAST,
+  GIKI, PIEAS, LUMS, NUST and PUCIT, with a validation gate that blocks bad
+  parses before commit. UET held (site down 522) on the `scraper-uet` branch.
 
 ## 2026-08-22
 
