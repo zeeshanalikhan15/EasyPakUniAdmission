@@ -1,8 +1,8 @@
-name: Scrape LUMS
+name: Scrape PUCIT
 
 on:
   schedule:
-    - cron: "45 2 * * 0"
+    - cron: "30 3 * * 0"
   workflow_dispatch:
 
 permissions:
@@ -17,10 +17,10 @@ jobs:
         with:
           node-version: "lts/*"
       - run: npm ci
-      - name: Scrape LUMS admission schedule
-        run: node scripts/scrapers/lums.mjs
+      - name: Scrape PUCIT admission schedule
+        run: node scripts/scrapers/pucit.mjs
       - name: Validate data
-        run: node scripts/validate.mjs lums
+        run: node scripts/validate.mjs pucit
       - name: Commit & push if changed
         run: |
           git config user.name "github-actions[bot]"
@@ -28,7 +28,7 @@ jobs:
           if git diff --quiet; then
             echo "No change."
           else
-            git add src/data/lums.json
-            git commit -m "chore: update LUMS admission data (scraper)"
+            git add src/data/pucit.json
+            git commit -m "chore: update PUCIT admission data (scraper)"
             git push
           fi

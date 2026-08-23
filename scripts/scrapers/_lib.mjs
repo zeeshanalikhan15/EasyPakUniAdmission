@@ -109,6 +109,9 @@ export function parseDate(s) {
   // "5 Oct 2025" / "5 Oct, 2025"
   m = str.match(/^(\d{1,2})\s+([A-Za-z]{3,9})\.?,?\s+(\d{4})$/);
   if (m) return iso(+m[3], MONTHS[m[2].slice(0, 3).toLowerCase()], +m[1]);
+  // "19/07/2026" / "19-07-2026"
+  m = str.match(/^(\d{1,2})\s*[-/]\s*(\d{1,2})\s*[-/]\s*(\d{4})$/);
+  if (m) return iso(+m[3], +m[2], +m[1]);
   // fallback: use local date components (avoid UTC shift)
   const d = new Date(str);
   return Number.isNaN(d.getTime())

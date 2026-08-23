@@ -21,6 +21,8 @@ jobs:
         run: npx playwright install --with-deps chromium
       - name: Scrape NUST admission schedule
         run: node scripts/scrapers/nust.mjs
+      - name: Validate data
+        run: node scripts/validate.mjs nust
       - name: Commit & push if changed
         run: |
           git config user.name "github-actions[bot]"

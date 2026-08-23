@@ -19,6 +19,8 @@ jobs:
       - run: npm ci
       - name: Scrape PIEAS admission schedule
         run: node scripts/scrapers/pieas.mjs
+      - name: Validate data
+        run: node scripts/validate.mjs pieas
       - name: Commit & push if changed
         run: |
           git config user.name "github-actions[bot]"

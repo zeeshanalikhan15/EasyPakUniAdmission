@@ -1,8 +1,8 @@
-name: Scrape LUMS
+name: Scrape UET
 
 on:
   schedule:
-    - cron: "45 2 * * 0"
+    - cron: "15 3 * * 0"
   workflow_dispatch:
 
 permissions:
@@ -17,10 +17,12 @@ jobs:
         with:
           node-version: "lts/*"
       - run: npm ci
-      - name: Scrape LUMS admission schedule
-        run: node scripts/scrapers/lums.mjs
+      - name: Install Playwright Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Scrape UET admission schedule
+        run: node scripts/scrapers/uet.mjs
       - name: Validate data
-        run: node scripts/validate.mjs lums
+        run: node scripts/validate.mjs uet
       - name: Commit & push if changed
         run: |
           git config user.name "github-actions[bot]"
@@ -28,7 +30,7 @@ jobs:
           if git diff --quiet; then
             echo "No change."
           else
-            git add src/data/lums.json
-            git commit -m "chore: update LUMS admission data (scraper)"
+            git add src/data/uet.json
+            git commit -m "chore: update UET admission data (scraper)"
             git push
           fi
