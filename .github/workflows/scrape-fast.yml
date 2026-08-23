@@ -2,7 +2,7 @@ name: Scrape FAST
 
 on:
   schedule:
-    - cron: "0 2 * * 0"
+    - cron: "0 2 * * 2"
   workflow_dispatch:
 
 permissions:

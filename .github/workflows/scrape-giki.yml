@@ -2,7 +2,7 @@ name: Scrape GIKI
 
 on:
   schedule:
-    - cron: "15 2 * * 0"
+    - cron: "15 2 * * 2"
   workflow_dispatch:
 
 permissions:
