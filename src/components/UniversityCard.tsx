@@ -14,6 +14,7 @@ interface UniContent {
   testName: string
   desc: string
   feeNote: string
+  programs: { name: string; url: string }[]
   eligibility: string
   steps: string[]
   resources: { name: string; url: string; note: string }[]
@@ -70,6 +71,32 @@ export default function UniversityCard({ uni }: { uni: University }) {
           </div>
           <p className="mt-3 text-sm text-stone-600">{u.desc}</p>
         </header>
+
+        {/* BS programmes */}
+        <section className="mt-4">
+          <h3 className="text-sm font-bold uppercase tracking-wide text-stone-500">
+            {t("common.programs")}
+          </h3>
+          <ul className="mt-2 flex flex-wrap gap-1.5">
+            {u.programs.map((program) => (
+              <li key={program.url}>
+                <a
+                  href={program.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block rounded-full border px-2.5 py-1 text-xs font-semibold transition hover:opacity-80"
+                  style={{
+                    color: uni.color,
+                    borderColor: `${uni.color}40`,
+                    backgroundColor: `${uni.color}0f`,
+                  }}
+                >
+                  {program.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
 
         {/* Quick facts */}
         <div className="mt-4 grid grid-cols-2 gap-2">
