@@ -10,24 +10,80 @@
       "id": "fall-2027",
       "title": "Fall 2027",
       "events": [
-        { "type": "applicationOpen", "date": "2027-02-08", "tentative": true },
-        { "type": "test", "series": "1st", "date": "2027-04-12", "tentative": true },
-        { "type": "applicationClose", "date": "2027-06-19", "tentative": true },
-        { "type": "test", "series": "2nd", "date": "2027-07-12", "tentative": true },
-        { "type": "merit", "date": "2027-07-27", "tentative": true },
-        { "type": "classes", "date": "2027-09-07", "tentative": true }
+        {
+          "type": "applicationOpen",
+          "date": "2027-02-08",
+          "tentative": true
+        },
+        {
+          "type": "test",
+          "series": "1st",
+          "date": "2027-04-12",
+          "tentative": true
+        },
+        {
+          "type": "applicationClose",
+          "date": "2027-06-19",
+          "tentative": true
+        },
+        {
+          "type": "test",
+          "series": "2nd",
+          "date": "2027-07-12",
+          "tentative": true
+        },
+        {
+          "type": "merit",
+          "date": "2027-07-27",
+          "tentative": true
+        },
+        {
+          "type": "classes",
+          "date": "2027-09-07",
+          "tentative": true
+        }
       ]
     },
     {
       "id": "fall-2026",
       "title": "Fall 2026",
       "events": [
-        { "type": "applicationOpen", "date": "2026-02-08" },
-        { "type": "test", "series": "1st", "date": "2026-04-12" },
-        { "type": "applicationClose", "date": "2026-06-19" },
-        { "type": "test", "series": "2nd", "date": "2026-07-12" },
-        { "type": "merit", "date": "2026-07-27" },
-        { "type": "classes", "date": "2026-09-07" }
+        {
+          "type": "applicationOpen",
+          "date": "2026-02-08"
+        },
+        {
+          "type": "applicationClose",
+          "date": "2026-03-05",
+          "series": "1st"
+        },
+        {
+          "type": "test",
+          "date": "2026-04-12",
+          "series": "1st"
+        },
+        {
+          "type": "applicationClose",
+          "date": "2026-06-12",
+          "series": "2nd"
+        },
+        {
+          "type": "applicationClose",
+          "date": "2026-06-19"
+        },
+        {
+          "type": "test",
+          "date": "2026-07-12",
+          "series": "2nd"
+        },
+        {
+          "type": "merit",
+          "date": "2026-07-20"
+        },
+        {
+          "type": "classes",
+          "date": "2026-09-07"
+        }
       ]
     }
   ]
