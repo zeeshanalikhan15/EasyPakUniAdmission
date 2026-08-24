@@ -10,30 +10,187 @@
       "id": "net-2027",
       "title": "NET 2027",
       "events": [
-        { "type": "registrationOpen", "series": "Series 1", "date": "2026-10-05", "tentative": true },
-        { "type": "registrationClose", "series": "Series 1", "date": "2026-11-25", "tentative": true },
-        { "type": "test", "series": "Series 1", "date": "2026-11-22", "endDate": "2026-12-10", "tentative": true },
-        { "type": "registrationOpen", "series": "Series 2", "date": "2026-12-14", "tentative": true },
-        { "type": "registrationClose", "series": "Series 2", "date": "2027-02-01", "tentative": true },
-        { "type": "test", "series": "Series 2", "date": "2027-01-31", "endDate": "2027-02-15", "tentative": true },
-        { "type": "registrationOpen", "series": "Series 3", "date": "2027-02-22", "tentative": true },
-        { "type": "registrationClose", "series": "Series 3", "date": "2027-04-05", "tentative": true },
-        { "type": "test", "series": "Series 3", "date": "2027-04-04", "endDate": "2027-05-02", "tentative": true },
-        { "type": "registrationOpen", "series": "Series 4", "date": "2027-04-26", "tentative": true },
-        { "type": "registrationClose", "series": "Series 4", "date": "2027-06-18", "tentative": true },
-        { "type": "test", "series": "Series 4", "date": "2027-06-13", "endDate": "2027-07-29", "tentative": true },
-        { "type": "merit", "date": "2027-07-25", "tentative": true },
-        { "type": "classes", "date": "2027-09-01", "tentative": true }
+        {
+          "type": "registrationOpen",
+          "series": "Series 1",
+          "date": "2026-10-05",
+          "tentative": true
+        },
+        {
+          "type": "registrationClose",
+          "series": "Series 1",
+          "date": "2026-11-25",
+          "tentative": true
+        },
+        {
+          "type": "test",
+          "series": "Series 1",
+          "date": "2026-11-22",
+          "endDate": "2026-12-10",
+          "tentative": true
+        },
+        {
+          "type": "registrationOpen",
+          "series": "Series 2",
+          "date": "2026-12-14",
+          "tentative": true
+        },
+        {
+          "type": "registrationClose",
+          "series": "Series 2",
+          "date": "2027-02-01",
+          "tentative": true
+        },
+        {
+          "type": "test",
+          "series": "Series 2",
+          "date": "2027-01-31",
+          "endDate": "2027-02-15",
+          "tentative": true
+        },
+        {
+          "type": "registrationOpen",
+          "series": "Series 3",
+          "date": "2027-02-22",
+          "tentative": true
+        },
+        {
+          "type": "registrationClose",
+          "series": "Series 3",
+          "date": "2027-04-05",
+          "tentative": true
+        },
+        {
+          "type": "test",
+          "series": "Series 3",
+          "date": "2027-04-04",
+          "endDate": "2027-05-02",
+          "tentative": true
+        },
+        {
+          "type": "registrationOpen",
+          "series": "Series 4",
+          "date": "2027-04-26",
+          "tentative": true
+        },
+        {
+          "type": "registrationClose",
+          "series": "Series 4",
+          "date": "2027-06-18",
+          "tentative": true
+        },
+        {
+          "type": "test",
+          "series": "Series 4",
+          "date": "2027-06-13",
+          "endDate": "2027-07-29",
+          "tentative": true
+        },
+        {
+          "type": "merit",
+          "date": "2027-07-25",
+          "tentative": true
+        },
+        {
+          "type": "classes",
+          "date": "2027-09-01",
+          "tentative": true
+        }
+      ]
+    },
+    {
+      "id": "net-2026",
+      "title": "NET 2026",
+      "events": [
+        {
+          "type": "registrationOpen",
+          "series": "Series 1",
+          "date": "2025-10-05"
+        },
+        {
+          "type": "registrationClose",
+          "series": "Series 1",
+          "date": "2025-11-25"
+        },
+        {
+          "type": "test",
+          "series": "Series 1",
+          "date": "2025-11-22",
+          "endDate": "2025-12-10"
+        },
+        {
+          "type": "registrationOpen",
+          "series": "Series 2",
+          "date": "2025-12-14"
+        },
+        {
+          "type": "registrationClose",
+          "series": "Series 2",
+          "date": "2026-02-01"
+        },
+        {
+          "type": "test",
+          "series": "Series 2",
+          "date": "2026-01-31",
+          "endDate": "2026-02-15"
+        },
+        {
+          "type": "registrationOpen",
+          "series": "Series 3",
+          "date": "2026-02-22"
+        },
+        {
+          "type": "registrationClose",
+          "series": "Series 3",
+          "date": "2026-04-05"
+        },
+        {
+          "type": "test",
+          "series": "Series 3",
+          "date": "2026-04-04",
+          "endDate": "2026-05-02"
+        },
+        {
+          "type": "registrationOpen",
+          "series": "Series 4",
+          "date": "2026-04-26"
+        },
+        {
+          "type": "registrationClose",
+          "series": "Series 4",
+          "date": "2026-06-18"
+        },
+        {
+          "type": "test",
+          "series": "Series 4",
+          "date": "2026-06-13"
+        }
       ]
     },
     {
       "id": "fall-2026",
       "title": "Fall 2026",
       "events": [
-        { "type": "registrationOpen", "series": "Series 4", "date": "2026-04-26" },
-        { "type": "registrationClose", "series": "Series 4", "date": "2026-06-18" },
-        { "type": "test", "series": "Series 4", "date": "2026-06-13", "endDate": "2026-07-29" },
-        { "type": "classes", "date": "2026-09-01" }
+        {
+          "type": "registrationOpen",
+          "series": "Series 4",
+          "date": "2026-04-26"
+        },
+        {
+          "type": "registrationClose",
+          "series": "Series 4",
+          "date": "2026-06-18"
+        },
+        {
+          "type": "test",
+          "series": "Series 4",
+          "date": "2026-06-13",
+          "endDate": "2026-07-29"
+        },
+        {
+          "type": "classes",
+          "date": "2026-09-01"
+        }
       ]
     }
   ]
