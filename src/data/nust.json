@@ -108,25 +108,20 @@
           "date": "2025-10-05"
         },
         {
-          "type": "registrationClose",
-          "series": "Series 1",
-          "date": "2025-11-25"
-        },
-        {
           "type": "test",
           "series": "Series 1",
           "date": "2025-11-22",
           "endDate": "2025-12-10"
         },
         {
+          "type": "registrationClose",
+          "series": "Series 1",
+          "date": "2025-11-25"
+        },
+        {
           "type": "registrationOpen",
           "series": "Series 2",
           "date": "2025-12-14"
-        },
-        {
-          "type": "registrationClose",
-          "series": "Series 2",
-          "date": "2026-02-01"
         },
         {
           "type": "test",
@@ -135,14 +130,14 @@
           "endDate": "2026-02-15"
         },
         {
+          "type": "registrationClose",
+          "series": "Series 2",
+          "date": "2026-02-01"
+        },
+        {
           "type": "registrationOpen",
           "series": "Series 3",
           "date": "2026-02-22"
-        },
-        {
-          "type": "registrationClose",
-          "series": "Series 3",
-          "date": "2026-04-05"
         },
         {
           "type": "test",
@@ -151,19 +146,24 @@
           "endDate": "2026-05-02"
         },
         {
+          "type": "registrationClose",
+          "series": "Series 3",
+          "date": "2026-04-05"
+        },
+        {
           "type": "registrationOpen",
           "series": "Series 4",
           "date": "2026-04-26"
         },
         {
-          "type": "registrationClose",
-          "series": "Series 4",
-          "date": "2026-06-18"
-        },
-        {
           "type": "test",
           "series": "Series 4",
           "date": "2026-06-13"
+        },
+        {
+          "type": "registrationClose",
+          "series": "Series 4",
+          "date": "2026-06-18"
         }
       ]
     },
