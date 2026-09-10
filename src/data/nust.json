@@ -13,78 +13,62 @@
         {
           "type": "registrationOpen",
           "series": "Series 1",
-          "date": "2026-10-05",
-          "tentative": true
+          "date": "2026-10-04"
         },
         {
           "type": "registrationClose",
           "series": "Series 1",
-          "date": "2026-11-25",
-          "tentative": true
+          "date": "2026-11-14"
         },
         {
           "type": "test",
           "series": "Series 1",
-          "date": "2026-11-22",
-          "endDate": "2026-12-10",
-          "tentative": true
+          "date": "2026-11-17"
         },
         {
           "type": "registrationOpen",
           "series": "Series 2",
-          "date": "2026-12-14",
-          "tentative": true
+          "date": "2026-12-01"
         },
         {
           "type": "registrationClose",
           "series": "Series 2",
-          "date": "2027-02-01",
-          "tentative": true
+          "date": "2027-01-01"
         },
         {
           "type": "test",
           "series": "Series 2",
-          "date": "2027-01-31",
-          "endDate": "2027-02-15",
-          "tentative": true
+          "date": "2027-01-01"
         },
         {
           "type": "registrationOpen",
           "series": "Series 3",
-          "date": "2027-02-22",
-          "tentative": true
+          "date": "2027-02-01"
         },
         {
           "type": "registrationClose",
           "series": "Series 3",
-          "date": "2027-04-05",
-          "tentative": true
+          "date": "2027-03-01"
         },
         {
           "type": "test",
           "series": "Series 3",
-          "date": "2027-04-04",
-          "endDate": "2027-05-02",
-          "tentative": true
+          "date": "2027-04-01"
         },
         {
           "type": "registrationOpen",
           "series": "Series 4",
-          "date": "2027-04-26",
-          "tentative": true
+          "date": "2027-04-01"
         },
         {
           "type": "registrationClose",
           "series": "Series 4",
-          "date": "2027-06-18",
-          "tentative": true
+          "date": "2027-05-01"
         },
         {
           "type": "test",
           "series": "Series 4",
-          "date": "2027-06-13",
-          "endDate": "2027-07-29",
-          "tentative": true
+          "date": "2027-06-01"
         },
         {
           "type": "merit",
