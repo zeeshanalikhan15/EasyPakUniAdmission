@@ -21,6 +21,7 @@ Running log of what's been done (newest last).
 - Added three more universities: UET, GIKI and PUCIT (data + bilingual content + resources).
 - Increased Urdu line spacing (Nastaliq) so lines no longer merge; marked channel resources to check their entry test playlists.
 - Added PIEAS university (data + bilingual content + resources).
+- Fixed UET data: added the admission-application open date (June 8) and reconciled the conflicting classes-commence date (Sept 14 per admission portal).
 - Recorded the update workflow: on each "update", also refresh the resources list.
 - Fixed "upcoming" logic: only actionable events (apply/register/test) count as
   upcoming, so a closed cycle with a future "classes begin" no longer shows old dates.
