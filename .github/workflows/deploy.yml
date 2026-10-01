@@ -4,6 +4,22 @@ on:
   push:
     branches:
       - main
+  workflow_run:
+    # Deploy right after any scraper finishes (GITHUB_TOKEN pushes don't
+    # re-trigger this workflow via `push`, so chain it explicitly).
+    workflows:
+      - Scrape FAST
+      - Scrape GIKI
+      - Scrape LUMS
+      - Scrape NUST
+      - Scrape PIEAS
+      - Scrape PUCIT
+      - Scrape UET
+    types: [completed]
+  schedule:
+    # Daily safety net — deploys the latest data even if a scrape was missed.
+    - cron: "17 18 * * *"
+  workflow_dispatch:
 
 jobs:
   deploy:
