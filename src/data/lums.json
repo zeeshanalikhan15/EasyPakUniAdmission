@@ -17,18 +17,27 @@
         },
         {
           "type": "applicationClose",
-          "date": "2027-01-26",
-          "tentative": true
+          "date": "2027-01-20"
         },
         {
           "type": "docsDeadline",
-          "date": "2027-01-27",
-          "tentative": true
+          "date": "2027-01-21"
+        },
+        {
+          "type": "financialAid",
+          "date": "2027-02-22"
+        },
+        {
+          "type": "satDeadline",
+          "date": "2027-03-06"
         },
         {
           "type": "test",
-          "date": "2027-02-14",
-          "tentative": true
+          "date": "2027-03-21"
+        },
+        {
+          "type": "actDeadline",
+          "date": "2027-04-10"
         },
         {
           "type": "decisions",
