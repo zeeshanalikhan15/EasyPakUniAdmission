@@ -55,7 +55,9 @@ Running log of what's been done (newest last).
 - Rewrote the PUCIT scraper to stop hardcoding notice IDs (698/693 had been
   unpublished — their pages now render a PHP "Undefined variable" error). It
   now reads the `admission_notices` index, selects the undergraduate notice by
-  title, and parses the `from … to …` open/close window. "2nd Phase (Vacant
+  title, and parses the `from … to …` open/close window (with fallback
+  `opens on`/`closes on` phrasings, and failure messages that list the index
+  notices). "2nd Phase (Vacant
   Seats)" re-openings are treated as a no-op so they don't overwrite the main
   Phase-1 window (verified: `pucit.mjs` exits 0 without touching `pucit.json`).
 - Added an official website link per university: new `website` field in the

@@ -43,6 +43,27 @@ function parseNotice(text) {
     if (close) events.push({ type: "applicationClose", date: close });
   }
 
+  // Fallback open/close phrasings when "from…to" isn't used, e.g.
+  // "online portal opens on 8 September 2026" / "portal closes on 28 September 2026".
+  if (!events.some((e) => e.type === "applicationOpen")) {
+    const m = text.match(
+      new RegExp(`(?:portal|application|admissions?|registration)[\\s\\S]{0,60}?\\bopens?\\b\\s*(?:on|from)?\\s*:?\\s*(${ANYDATE})`, "i"),
+    );
+    if (m) {
+      const date = parseDate(m[1]);
+      if (date) events.push({ type: "applicationOpen", date });
+    }
+  }
+  if (!events.some((e) => e.type === "applicationClose")) {
+    const m = text.match(
+      new RegExp(`(?:portal|application|admissions?|registration)[\\s\\S]{0,60}?\\bcloses?\\b\\s*(?:on)?\\s*:?\\s*(${ANYDATE})`, "i"),
+    );
+    if (m) {
+      const date = parseDate(m[1]);
+      if (date) events.push({ type: "applicationClose", date });
+    }
+  }
+
   // "2nd Admission Test … July 5, 2026" (ordinal + a date somewhere after).
   for (const m of text.matchAll(
     new RegExp(`(\\d(?:st|nd|rd|th)?)\\s*(?:pu\\s*)?admission\\s*test[\\s\\S]{0,160}?(${ANYDATE})`, "gi"),
@@ -65,8 +86,14 @@ function parseNotice(text) {
 
 async function main() {
   const html = await fetchHtml(INDEX);
-  const all = noticeLinks(html).filter((l) => /undergraduate/i.test(l.title));
-  if (!all.length) throw new Error("pucit: no undergraduate admission notice in index");
+  const links = noticeLinks(html);
+  const all = links.filter((l) => /undergraduate/i.test(l.title));
+  if (!all.length) {
+    const titles = links.map((l) => l.title).filter(Boolean);
+    throw new Error(
+      `pucit: no undergraduate notice in index. Notices found (${titles.length}): ${titles.join(" | ") || "(none parsed)"}`,
+    );
+  }
 
   // "2nd Phase (Vacant Seats)" re-openings are not a new admission cycle — they
   // post-date the already-recorded Phase-1 window, so we skip them rather than
@@ -98,7 +125,8 @@ async function main() {
   });
 
   if (!deduped.length) {
-    throw new Error(`pucit: no events parsed${errors.length ? ` (${errors.join("; ")})` : ""}`);
+    const tried = primary.map((c) => `#${c.id} ${c.title}`).join(" | ");
+    throw new Error(`pucit: no events parsed from ${tried}${errors.length ? ` (${errors.join("; ")})` : ""}`);
   }
   const { cycle, path } = writeUniversity("pucit", deduped);
   console.log(`[pucit] wrote ${cycle.id} (${deduped.length} events) -> ${path}`);

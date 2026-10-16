@@ -61,6 +61,9 @@ When the user asks to "update" the admission data:
 - **Vacant-seats re-openings are not a new cycle.** A "2nd Phase (Vacant
   Seats)" notice post-dates the already-recorded Phase-1 window, so the
   scraper no-ops on it instead of overwriting `applicationOpen`/`applicationClose`.
+- **Fail loudly with context.** If no undergraduate notice is found, the error
+  lists every notice title in the index; if nothing parses, it lists the
+  notice(s) tried — so a wording/HTML change is a one-line fix, not a hunt.
 
 ## 2026-10-16 — Website link lives in the JSON
 
