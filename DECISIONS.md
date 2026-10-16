@@ -43,6 +43,31 @@ When the user asks to "update" the admission data:
 - **Coverage: 6 of 7.** UET is parked on the `scraper-uet` branch until its
   server recovers (issue #3).
 
+## 2026-10-16 — UET scraper loads the news page in a real browser
+
+- **`admission.uet.edu.pk/news` 403s plain HTTPS requests** (the `_lib.mjs`
+  `fetchHtml` helper) but returns 200 to headless Chromium. `scrapeNews` now
+  fetches the page through Playwright, matching the downloads-page source.
+- **One browser, not two** — `findSchedulePdf` and `scrapeNews` share a single
+  `chromium.launch` (launched/closed in `main`) instead of each launching its
+  own, so the weekly job only boots Chromium once.
+
+## 2026-10-16 — PUCIT scraper discovers notices via the index
+
+- **Notice IDs rotate every cycle** (698/693 → 719 …), so hardcoding them
+  breaks as soon as PU publishes a new cycle. The scraper now reads
+  `pu.edu.pk/home/admission_notices`, picks the undergraduate notice by title,
+  and parses the `from <date> to <date>` window.
+- **Vacant-seats re-openings are not a new cycle.** A "2nd Phase (Vacant
+  Seats)" notice post-dates the already-recorded Phase-1 window, so the
+  scraper no-ops on it instead of overwriting `applicationOpen`/`applicationClose`.
+
+## 2026-10-16 — Website link lives in the JSON
+
+- Each university's **official home-page URL is a `website` field in the data
+  JSON** (alongside `applyUrl`), not in i18n — URLs aren't translatable, and
+  this matches the existing `applyUrl` convention. The card title links to it.
+
 ## 2026-08-23 — BS programmes listed per university
 
 - Each university card now lists its **BS programmes** as linked chips (a

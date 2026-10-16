@@ -40,6 +40,28 @@ Running log of what's been done (newest last).
   GIKI, PIEAS, LUMS, NUST and PUCIT, with a validation gate that blocks bad
   parses before commit. UET held (site down 522) on the `scraper-uet` branch.
 
+## 2026-10-16
+
+- Investigated the failing GitHub Actions scrapers. Two are failing: **PUCIT**
+  (`no events parsed` — `pu.edu.pk` admission-notice pages now render an empty
+  PHP-error template, "Undefined variable: adm_title/adm_description") and
+  **UET** (`HTTP 403 for admission.uet.edu.pk/news`). FAST/GIKI/LUMS/NUST/PIEAS
+  are all passing.
+- Fixed the UET scraper: the news-page fetch used the plain-https `fetchHtml`
+  helper and got a 403, while a real browser returns 200. Routed the news page
+  through the Playwright browser already used for the downloads page, and
+  refactored to share one browser across both sources. Verified locally
+  (`wrote fall-2026 (1 events)` + `validate uet: OK`).
+- Rewrote the PUCIT scraper to stop hardcoding notice IDs (698/693 had been
+  unpublished — their pages now render a PHP "Undefined variable" error). It
+  now reads the `admission_notices` index, selects the undergraduate notice by
+  title, and parses the `from … to …` open/close window. "2nd Phase (Vacant
+  Seats)" re-openings are treated as a no-op so they don't overwrite the main
+  Phase-1 window (verified: `pucit.mjs` exits 0 without touching `pucit.json`).
+- Added an official website link per university: new `website` field in the
+  JSON schema (`src/data/types.ts` + all 7 JSON files), rendered as a link on
+  each card's title in `UniversityCard.tsx`.
+
 ## 2026-08-22
 
 - Built the app: FAST, LUMS, NUST with admission dates, fees, eligibility and

@@ -59,7 +59,19 @@ export default function UniversityCard({ uni }: { uni: University }) {
             </span>
             <div className="min-w-0">
               <div className="flex flex-wrap items-center gap-2">
-                <h2 className="text-xl font-extrabold leading-tight text-stone-900">{u.name}</h2>
+                <h2 className="text-xl font-extrabold leading-tight text-stone-900">
+                  <a
+                    href={uni.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline-offset-2 hover:underline"
+                  >
+                    {u.name}
+                    <span aria-hidden="true" className="ms-1 align-middle text-sm opacity-60">
+                      ↗
+                    </span>
+                  </a>
+                </h2>
                 <span
                   className="rounded-full px-2 py-0.5 text-[11px] font-bold tracking-wide text-white"
                   style={{ backgroundColor: uni.color }}

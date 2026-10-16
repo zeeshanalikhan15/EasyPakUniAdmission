@@ -1,4 +1,4 @@
-import { writeUniversity, fetchHtml, extractText, parseDate } from "./_lib.mjs";
+import { writeUniversity, extractText, parseDate } from "./_lib.mjs";
 import { chromium } from "playwright";
 import { getDocument } from "pdfjs-dist/legacy/build/pdf.mjs";
 
@@ -12,10 +12,9 @@ const NEWS = "https://admission.uet.edu.pk/news";
 // The downloads page renders its list via JS, so we drive a real browser to
 // find the schedule PDF, then extract text with pdfjs-dist.
 // ---------------------------------------------------------------------------
-async function findSchedulePdf() {
-  const browser = await chromium.launch({ headless: true });
+async function findSchedulePdf(browser) {
+  const page = await browser.newPage({ userAgent: UA, ignoreHTTPSErrors: true });
   try {
-    const page = await browser.newPage({ userAgent: UA, ignoreHTTPSErrors: true });
     await page.goto(DOWNLOADS, { waitUntil: "domcontentloaded", timeout: 45000 });
     await page.waitForTimeout(8000);
     const items = await page.evaluate(() =>
@@ -37,7 +36,7 @@ async function findSchedulePdf() {
     if (!item) throw new Error(`schedule PDF not found (${items.length} PDF items seen)`);
     return item.url;
   } finally {
-    await browser.close();
+    await page.close();
   }
 }
 
@@ -87,8 +86,16 @@ function parseSchedule(text) {
 // Used as a fallback and for recent announcements. Conservative on purpose:
 // only clear labels, so we don't mis-map "leftover seats" / "walk-in" wording.
 // ---------------------------------------------------------------------------
-async function scrapeNews() {
-  const text = extractText(await fetchHtml(NEWS));
+async function scrapeNews(browser) {
+  const page = await browser.newPage({ userAgent: UA, ignoreHTTPSErrors: true });
+  let text;
+  try {
+    await page.goto(NEWS, { waitUntil: "domcontentloaded", timeout: 45000 });
+    await page.waitForTimeout(4000);
+    text = extractText(await page.content());
+  } finally {
+    await page.close();
+  }
   const events = [];
   const rules = [
     [/merit\s*list/i, "merit"],
@@ -110,18 +117,23 @@ async function scrapeNews() {
 async function main() {
   const events = [];
   const errors = [];
+  const browser = await chromium.launch({ headless: true });
 
-  // PDF first (full schedule), then news (fallback / recent).
   try {
-    const url = await findSchedulePdf();
-    events.push(...parseSchedule(await pdfText(url)));
-  } catch (e) {
-    errors.push(`pdf: ${e.message}`);
-  }
-  try {
-    events.push(...(await scrapeNews()));
-  } catch (e) {
-    errors.push(`news: ${e.message}`);
+    // PDF first (full schedule), then news (fallback / recent).
+    try {
+      const url = await findSchedulePdf(browser);
+      events.push(...parseSchedule(await pdfText(url)));
+    } catch (e) {
+      errors.push(`pdf: ${e.message}`);
+    }
+    try {
+      events.push(...(await scrapeNews(browser)));
+    } catch (e) {
+      errors.push(`news: ${e.message}`);
+    }
+  } finally {
+    await browser.close();
   }
 
   // De-duplicate by type(+series)+date (both sources can surface the same event).

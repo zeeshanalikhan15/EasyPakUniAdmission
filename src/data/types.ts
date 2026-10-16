@@ -46,6 +46,8 @@ export interface University {
   emoji: string
   /** Brand accent colour (hex) */
   color: string
+  /** Official university website (home page) */
+  website: string
   applyUrl: string
   /** Application / processing fee in PKR */
   fee: number
