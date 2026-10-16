@@ -63,6 +63,8 @@ Running log of what's been done (newest last).
 - Added an official website link per university: new `website` field in the
   JSON schema (`src/data/types.ts` + all 7 JSON files), rendered as a link on
   each card's title in `UniversityCard.tsx`.
+- Bumped `actions/checkout` and `actions/setup-node` from v4 (deprecated
+  Node 20) to v7 across all eight GitHub Actions workflows.
 
 ## 2026-08-22
 
