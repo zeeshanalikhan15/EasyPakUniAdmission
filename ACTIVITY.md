@@ -66,6 +66,14 @@ Running log of what's been done (newest last).
 - Bumped `actions/checkout` and `actions/setup-node` from v4 (deprecated
   Node 20) to v7 across all eight GitHub Actions workflows.
 
+## 2026-10-19
+
+- Fixed an intermittent UET scraper failure: `findSchedulePdf` used a fixed
+  8-second sleep before scanning the JS-rendered downloads list, so a slow load
+  returned "0 PDF items" (the Oct 18 scheduled run). It now waits for the PDF
+  links to appear (up to 30s) before scanning. The "Admission Process Schedule -
+  Fall 2026" PDF is still present — it was just a load-timing issue.
+
 ## 2026-08-22
 
 - Built the app: FAST, LUMS, NUST with admission dates, fees, eligibility and

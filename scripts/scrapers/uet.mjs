@@ -16,7 +16,14 @@ async function findSchedulePdf(browser) {
   const page = await browser.newPage({ userAgent: UA, ignoreHTTPSErrors: true });
   try {
     await page.goto(DOWNLOADS, { waitUntil: "domcontentloaded", timeout: 45000 });
-    await page.waitForTimeout(8000);
+    // The downloads list renders via JS; wait for the PDF links to appear
+    // instead of a fixed sleep (a slow load can exceed 8s and yield "0 items").
+    try {
+      await page.waitForSelector('a[href*=".pdf"]', { timeout: 30000 });
+    } catch {
+      // fall through — the evaluate below reports "0 PDF items" if truly empty
+    }
+    await page.waitForTimeout(2000);
     const items = await page.evaluate(() =>
       Array.from(document.querySelectorAll('a[href*=".pdf"]')).map((a) => {
         let el = a;
